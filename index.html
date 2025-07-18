@@ -29,11 +29,16 @@
         
         /* Header */
         header {
-            background-color: #1a2e4a;
+            background: linear-gradient(rgba(26, 46, 74, 0.7), rgba(26, 46, 74, 0.7)), 
+            url('imagenes/grupo_3.JPG') no-repeat center center;
+            background-size: cover;
             color: white;
-            padding: 1.5rem 0;
+            padding: 2.5rem 0;  
             text-align: center;
             position: relative;
+            min-height: 200px;  /* Altura mínima para asegurar buen aspecto */
+            display: flex;
+            align-items: center;
         }
         
         .logo {
@@ -54,21 +59,30 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            padding: 100;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
         }
         
         nav ul {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             list-style: none;
-            padding: 0.8rem 0;
+            padding: 0;
+            margin: 0 auto; 
+            flex-wrap: nowrap;
+            overflow-x: auto; 
+            max-width: 100%; 
+            flex-wrap: wrap; 
+            -webkit-overflow-scrolling: touch;
             white-space: nowrap;
-            min-width: 100%;
         }
         
         nav li {
-            margin: 0 0.5rem;
+            display: inline-block;
+            margin: 0 0.8rem;
+            flex: 0 0 auto;
+            flex-shrink: 0;
         }
         
         nav a {
@@ -78,11 +92,12 @@
             padding: 0.4rem 0.8rem;
             border-radius: 5px;
             transition: background-color 0.3s;
-            font-size: 0.9rem;
-            display: block;
+            font-size: clamp(0.8rem, 2.5vw, 1rem);
+            display: inline-block;
+            white-space: nowrap;
         }
         
-        nav a:hover {
+        nav a:hover, nav a:active {
             background-color: #4a6b9b;
         }
         
@@ -201,6 +216,26 @@
             margin-bottom: 0.8rem;
             border: 2px solid #1a2e4a;
         }
+
+        /* Estilos para la sección de otros integrantes */
+        .otros-integrantes {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .otros-integrantes h2 {
+            font-size: 1.8rem;
+            color: #1a2e4a;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .otros-integrantes .integrantes-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
         
         /* Galería - Optimizado para móviles */
         .galeria {
@@ -269,6 +304,25 @@
         
         .play-btn:hover {
             background: #4a6b9b;
+        }
+
+        /* Estilos para la imagen del logo */
+        .logo-image {
+            margin: 1rem auto;
+            text-align: center;
+        }
+
+        .logo-image img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .logo-image img {
+                max-width: 200px;
+            }
         }
         
         /* Media Queries para tablets y desktop */
@@ -360,6 +414,13 @@
                 font-size: 0.9rem;
             }
         }
+
+        @media (max-width: 768px) {
+            header {
+                min-height: 150px;
+                padding: 1.5rem 0;
+            }  
+        }
         
         @media (min-width: 992px) {
             .integrantes-grid {
@@ -383,19 +444,19 @@
             }
             
             nav ul {
-                padding: 0.6rem 0;
+                padding: 0.6rem 0.5rem;
                 justify-content: flex-start;
                 padding-left: 10px;
                 padding-right: 10px;
             }
             
             nav li {
-                margin: 0 0.3rem;
+                margin: 0 0.3rem 0.5rem;
             }
             
             nav a {
-                padding: 0.3rem 0.6rem;
-                font-size: 0.8rem;
+                padding: 0.4rem 0.6rem;
+                font-size: (0.9rem, 2.2vw, 0.9rem);
             }
             
             .historia, .faq-item {
@@ -421,6 +482,9 @@
     <header>
         <div class="container">
             <div class="logo">Jueces5</div>
+            <div class="logo-image">
+                <img src="imagenes/grupo en B y N.jpg" alt="Logo de Jueces5" loading="lazy">
+            </div>
             <div class="slogan">Una banda apasionada por crear música que inspire emociones y aumente la fe de nuestra audiencia</div>
         </div>
     </header>
@@ -566,7 +630,35 @@
                     </div>
                 </div>
             </section>
-         </div>
+        </div>
+        <section class="otros-integrantes">
+            <h2>Otros Integrantes</h2>
+            <div class="integrantes-grid">
+                <!-- Integrante 1 -->
+                <div class="integrante">
+                    <img src="imagenes/otros_integrantes/maikel.jpg" alt="Nombre Integrante 4" loading="lazy">
+                    <h3>Maikel Rodríguez Curbelo</h3>
+                    <p>Rol: sonidista</p>
+                    <p class="bio"></p>
+                </div>
+        
+                <!-- Integrante 2 -->
+                <div class="integrante">
+                    <img src="imagenes/otros_integrantes/marcelo.jpg" alt="Nombre Integrante 5" loading="lazy">
+                    <h3>Marcelo Díaz Armentero</h3>
+                    <p>Rol: Párroco/Representante</p>
+                    <p class="bio"></p>
+                </div>
+        
+                <!-- Integrante 3 -->
+                <div class="integrante">
+                    <img src="imagenes/otros_integrantes/leidi.jpg" alt="Nombre Integrante 6" loading="lazy">
+                    <h3>Leidiani González Santos</h3>
+                    <p>Rol: Camarógrafa</p>
+                    <p class="bio"></p>
+                </div>
+            </div>
+        </section>
         
         <!-- Galería -->
         <div id="galeria" class="page">
@@ -575,7 +667,7 @@
                 <div class="galeria">
                     <figure>
                         <img src="imagenes/ajuria/a.jpg" alt="Ajuria" loading="lazy">
-                        <figcaption>Ajuria</figcaption>
+                        <figcaption>Ajuria.</figcaption>
                     </figure>
                     <figure>
                         <img src="imagenes/lajas/b.jpg" alt="Santa Isabel de las Lajas" loading="lazy">
@@ -587,7 +679,7 @@
                     </figure>
                     <figure>
                         <img src="imagenes/mariapolis/b.jpg" alt="Mariapolis, La Habana" loading="lazy">
-                        <figcaption>Mariapolis, La Habana.</figcaption>
+                        <figcaption>Mariapolis, Camagüey.</figcaption>
                     </figure>
                     <figure>
                         <img src="imagenes/cruces_2023/a.JPG" alt="Cruces" loading="lazy">
