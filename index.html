@@ -809,61 +809,61 @@
 
         <!-- Canciones -->
         <div id="canciones" class="page">
-    <section>
-        <h2>Nuestra Música</h2>
-        <div class="canciones-lista">
-            <div class="cancion">
-                <div class="cancion-info">
-                    <h3>Padre Eterno</h3>
-                    <p>Álbum: Adorarte</p>
-                    <audio id="audio1">
-                        <source src="musica/padre eterno.mp3" type="audio/mpeg">
-                        <source src="musica/padre eterno.ogg" type="audio/ogg">
-                        Tu navegador no soporta el elemento de audio.
-                    </audio>
+            <section>
+               <h2>Nuestra Música</h2>
+               <div class="canciones-lista">
+                    <div class="cancion">
+                        <div class="cancion-info">
+                            <h3>Padre Eterno</h3>
+                            <p>Álbum: Adorarte</p>
+                            <audio id="audio1">
+                                <source src="musica/padre eterno.mp3" type="audio/mpeg">
+                                <source src="musica/padre eterno.ogg" type="audio/ogg">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                        <button class="play-btn" data-audio="audio1">Escuchar</button>
+                    </div>
+                    <div class="cancion">
+                        <div class="cancion-info">
+                            <h3>Amor de Días Grises</h3>
+                            <p>Álbum: Adorarte</p>
+                            <audio id="audio2">
+                                <source src="musica/amor de dias grises.mp3" type="audio/mpeg">
+                                <source src="musica/amor de dias grises.ogg" type="audio/ogg">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                        <button class="play-btn" data-audio="audio2">Escuchar</button>
+                    </div>
+                    <div class="cancion">
+                        <div class="cancion-info">
+                            <h3>Volver a Confíar</h3>
+                            <p>Álbum: Adorarte</p>
+                            <audio id="audio3">
+                                <source src="musica/volver a confiar.mp3" type="audio/mpeg">
+                                <source src="musica/volver a confiar.ogg" type="audio/ogg">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                        <button class="play-btn" data-audio="audio3">Escuchar</button>
+                    </div>
+                    <div class="cancion">
+                        <div class="cancion-info">
+                            <h3>Bajo la Luz Divina (está en proceso de grabación)</h3>
+                            <p>Álbum: Adorarte</p>
+                            <audio id="audio4">
+                                <source src="" type="audio/mpeg">
+                                <source src="" type="audio/ogg">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                        <button class="play-btn" data-audio="audio3">Escuchar</button>
+                    </div>
                 </div>
-                <button class="play-btn" data-audio="audio1">Escuchar</button>
-            </div>
-            <div class="cancion">
-                <div class="cancion-info">
-                    <h3>Amor de Días Grises</h3>
-                    <p>Álbum: Adorarte</p>
-                    <audio id="audio2">
-                        <source src="musica/amor de dias grises.mp3" type="audio/mpeg">
-                        <source src="musica/amor de dias grises.ogg" type="audio/ogg">
-                        Tu navegador no soporta el elemento de audio.
-                    </audio>
-                </div>
-                <button class="play-btn" data-audio="audio2">Escuchar</button>
-            </div>
-            <div class="cancion">
-                <div class="cancion-info">
-                    <h3>Volver a Confíar</h3>
-                    <p>Álbum: Adorarte</p>
-                    <audio id="audio3">
-                        <source src="musica/volver a confiar.mp3" type="audio/mpeg">
-                        <source src="musica/volver a confiar.ogg" type="audio/ogg">
-                        Tu navegador no soporta el elemento de audio.
-                    </audio>
-                </div>
-                <button class="play-btn" data-audio="audio3">Escuchar</button>
-            </div>
-            <div class="cancion">
-                <div class="cancion-info">
-                    <h3>Bajo la Luz Divina (está en proceso de grabación)</h3>
-                    <p>Álbum: Adorarte</p>
-                    <audio id="audio4">
-                        <source src="" type="audio/mpeg">
-                        <source src="" type="audio/ogg">
-                        Tu navegador no soporta el elemento de audio.
-                    </audio>
-                </div>
-                <button class="play-btn" data-audio="audio3">Escuchar</button>
-            </div>
+            </section>
+            <button class="btn-subir" title="Volver arriba">🡑</button>
         </div>
-    </section>
-    <button class="btn-subir" title="Volver arriba">🡑</button>
-    </div>
     </main>
     
     <footer>
@@ -887,81 +887,81 @@
                 e.preventDefault();
                 const pageId = this.getAttribute('data-page');
                 
-                // Ocultar todas las páginas
-                document.querySelectorAll('.page').forEach(page => {
-                    page.classList.remove('active');
-                });
+        // Ocultar todas las páginas
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
                 
-                // Mostrar la página seleccionada
-                document.getElementById(pageId).classList.add('active');
+        // Mostrar la página seleccionada
+        document.getElementById(pageId).classList.add('active');
                 
-                // Actualizar navegación activa
-                document.querySelectorAll('.nav-link').forEach(navLink => {
-                    navLink.style.backgroundColor = '';
-                });
-                this.style.backgroundColor = '#4a6b9b';
+        // Actualizar navegación activa
+        document.querySelectorAll('.nav-link').forEach(navLink => {
+            navLink.style.backgroundColor = '';
+        });
+        this.style.backgroundColor = '#4a6b9b';
                 
-                // Desplazarse al inicio de la página
-                window.scrollTo(0, 0);
-            });
+        // Desplazarse al inicio de la página
+        window.scrollTo(0, 0);
+        });
         });
         
         // Simular reproducción de canciones
         document.addEventListener('DOMContentLoaded', function() {
-        const playButtons = document.querySelectorAll('.play-btn');
+            const playButtons = document.querySelectorAll('.play-btn');
     
-        playButtons.forEach(button => {
-        button.addEventListener('click', async function() {
+            playButtons.forEach(button => {
+            button.addEventListener('click', async function() {
             const audioId = this.getAttribute('data-audio');
             const audio = document.getElementById(audioId);
             
             try {
-                // Verifica si el audio está cargado
-                if (audio.readyState === 0) {
-                    await audio.load(); // Fuerza la carga si no está cargado
-                }
+        // Verifica si el audio está cargado
+        if (audio.readyState === 0) {
+            await audio.load(); // Fuerza la carga si no está cargado
+        }
                 
-                if (audio.paused) {
-                    await audio.play();
-                    this.textContent = 'Pausar';
+        if (audio.paused) {
+            await audio.play();
+            this.textContent = 'Pausar';
                     
-                    // Pausar otros audios
-                    document.querySelectorAll('audio').forEach(a => {
-                        if (a !== audio && !a.paused) {
-                            a.pause();
-                            a.currentTime = 0;
-                            const otherBtn = document.querySelector(`[data-audio="${a.id}"]`);
-                            if (otherBtn) otherBtn.textContent = 'Escuchar';
-                        }
-                    });
-                } else {
-                    audio.pause();
-                    this.textContent = 'Escuchar';
-                }
-            } catch (error) {
-                console.error('Error de reproducción:', error);
+        // Pausar otros audios
+        document.querySelectorAll('audio').forEach(a => {
+            if (a !== audio && !a.paused) {
+                a.pause();
+                a.currentTime = 0;
+                const otherBtn = document.querySelector(`[data-audio="${a.id}"]`);
+                if (otherBtn) otherBtn.textContent = 'Escuchar';
+            }
+        });
+        } else {
+            audio.pause();
+            this.textContent = 'Escuchar';
+        }
+        } catch (error) {
+            console.error('Error de reproducción:', error);
                 alert(`Error al reproducir: ${error.message}. Verifica la consola para detalles.`);
                 }
             });
         });
         }); 
         
-                // Mejorar rendimiento en móviles
-                document.addEventListener('touchstart', function() {}, {passive: true});
+        // Mejorar rendimiento en móviles
+        document.addEventListener('touchstart', function() {}, {passive: true});
 
-                // Botones de subir - Versión mejorada para móviles
-                document.addEventListener('DOMContentLoaded', function() {
-                // Crear botones si no existen
-                document.querySelectorAll('.page').forEach(page => {
-                    if (!page.querySelector('.btn-subir')) {
-                        const btn = document.createElement('button');
-                        btn.className = 'btn-subir';
-                        btn.title = 'Volver arriba';
-                        btn.innerHTML = '↑';
-                        btn.setAttribute('aria-label', 'Volver al inicio de la página');
-                        page.appendChild(btn);
-                    }
-                });
+        // Botones de subir - Versión mejorada para móviles
+        document.addEventListener('DOMContentLoaded', function() {
+        // Crear botones si no existen
+        document.querySelectorAll('.page').forEach(page => {
+            if (!page.querySelector('.btn-subir')) {
+                const btn = document.createElement('button');
+                btn.className = 'btn-subir';
+                btn.title = 'Volver arriba';
+                btn.innerHTML = '↑';
+                btn.setAttribute('aria-label', 'Volver al inicio de la página');
+                page.appendChild(btn);
+            }
+        });
 
         // Controlar visibilidad y comportamiento
         const handleScroll = () => {
