@@ -191,7 +191,7 @@
             display: block;
         }
         
-        /* Integrantes - Optimizado para móviles */
+        /* Integrantes */
         .integrantes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -217,7 +217,17 @@
             border: 2px solid #1a2e4a;
         }
 
-        
+        .integrante p:first-of-type {
+            font-weight: bold;
+            color: #1a2e4a;
+            background-color: #e8f0fe;
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
         /* Galería - Optimizado para móviles */
         .galeria {
             display: grid;
@@ -300,13 +310,39 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        @media (max-width: 768px) {
-            .logo-image img {
-                max-width: 200px;
-            }
+        /* Botón de subir */
+        .btn-subir {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1a2e4a;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-subir.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .btn-subir:hover {
+            background-color: #4a6b9b;
+            transform: translateY(-3px);
         }
         
-        /* Media Queries para tablets y desktop */
         @media (min-width: 768px) {
             .container {
                 width: 90%;
@@ -359,6 +395,10 @@
                 width: 28px;
                 height: 28px;
             }
+
+            .logo-image img {
+                max-width: 200px;
+            }
             
             .integrantes-grid {
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -372,6 +412,11 @@
             .integrante img {
                 width: 120px;
                 height: 120px;
+            }
+
+            .integrante p:first-of-type {
+                font-size: 1rem;
+                padding: 0.4rem 0.8rem;
             }
             
             .galeria {
@@ -393,6 +438,14 @@
             .play-btn {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
+            }
+
+            .btn-subir {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                bottom: 15px;
+                right: 15px;
             }
         }
 
@@ -487,12 +540,10 @@
             <section>
                 <div class="historia">
                     <h2>Sobre nosotros</h2>
-                    <p>Jueces5 es un grupo de música cristiana de Cienfuegos/Cuba, formado por compañeros y compañeras unidos por la pasión por la música y la fé.
-                        Nacimos en 2023 y actualmente estamos grabando nuestro primer álbum "Adorarte", un proyecto lleno de ilusión y entrega. Desde nuestros inicios,
-                        buscamos transmitir el mensaje del Evangelio y la experiencia de fe a través de melodías que inspiren y acerquen a las personas a Dios
+                    <p>Jueces5 es un grupo de música cristiana de <a href="https://es.wikipedia.org/wiki/Lajas_(Cuba)" target="_blank" rel="noopener noreferrer">Santa Isabel de las Lajas/Cienfuegos/Cuba</a>, formado por compañeros y compañeras unidos por la pasión por la música y la fé. Nacimos en 2023 y actualmente estamos grabando nuestro primer álbum "Adorarte", un proyecto lleno de ilusión y entrega. Desde nuestros inicios, buscamos transmitir el mensaje del Evangelio y la experiencia de fe a través de melodías que inspiren y acerquen a las personas a Dios.
                 </div>
             </section>
-            
+
             <section>
                 <h2>Preguntas Frecuentes</h2>
                 
@@ -503,7 +554,7 @@
                 
                 <div class="faq-item">
                     <div class="faq-question">¿Cómo se formó el grupo?</div>
-                    <p>Nos conocimos en Santa Isabel de las Lajas, un pequeño municipio de Cienfuegos, Cuba. Éramos un grupo de jóvenes con un profundo amor por la música y la fe católica, y decidimos unirnos para alabar a Dios.
+                    <p>Nos conocimos en <a href="https://es.wikipedia.org/wiki/Lajas_(Cuba)" target="_blank" rel="noopener noreferrer">Santa Isabel de las Lajas</a> , un pequeño municipio de <a href="https://es.wikipedia.org/wiki/Cienfuegos" target="_blank" rel="noopener noreferrer">Cienfuegos</a>, <a href="https://es.wikipedia.org/wiki/Cuba" target="_blank" rel="noopener noreferrer">Cuba</a>. Éramos un grupo de jóvenes con un profundo amor por la música y la fe católica, y decidimos unirnos para alabar a Dios.
                 </div>
                 
                 <div class="faq-item">
@@ -570,43 +621,43 @@
                     <div class="integrante">
                         <img src="imagenes/integrantes/adriana.jpg" alt="Adriana Alonso Contreras" loading="lazy">
                         <h3>Adriana Alonso Contreras</h3>
-                        <p>Voz</p>
+                        <p>Voz 🎤</p>
                         <p>Desde pequeña se sintió atraída por la música y el canto gracias a su madre. Formó parte de Jueces5 desde sus inicios y junto a ellos ha mejorado significativamente</p>
                     </div>
                     <div class="integrante">
                         <img src="imagenes/integrantes/yaniela.jpg" alt="Yaniela Rodríguez" loading="lazy">
-                        <h3>Yaniela Rodríguez</h3>
-                        <p>Voz</p>
-                        <p>Desde hace unos años comenzó a cantar y descubrió que era su pasión. Junto a Jueces5 está logrando hacer realidad su sueño.</p>
+                        <h3>Yaniela Rodríguez Pérez</h3>
+                        <p>Voz 🎤</p>
+                        <p>Tiene 14 años y es parte de la iglesia católica. Hace un año se unió a Jueces5 después de participar en varios eventos culturales de su municipio como aficionada. Al integrarse al grupo, no solo cumplió el sueño de cantar, sino que también fortaleció su fe con Dios, quien ha sido clave en este logro.</p>
                     </div>
                     <div class="integrante">
                         <img src="imagenes/integrantes/pedro.jpg" alt="Pedro Pablo Pérez Villavicencio" loading="lazy">
                         <h3>Pedro Pablo Pérez Villavicencio</h3>
-                        <p>Bajo/Director</p>
-                        <p>Su pasión por la música comenzó con la creación del grupo que él mismo fundó, desde ese momento se enamoró del bajo y hasta el día de hoy es su fiel compañero.</p>
+                        <p>Bajo/Director 🎸</p>
+                        <p>Tiene 20 años y desde pequeño ha sido católico, asistiendo a la iglesia y creciendo en su fe. Su pasión por la música comenzó cuando tomó clases con su profesor Victor junto con la creación del grupo, enamorándose del bajo, instrumento que sigue siendo su fiel compañero. Disfruta de casi todos los géneros musicales, pero tiene preferencia por el rock, las baladas y la salsa.</p>
                     </div>
                     <div class="integrante">
                         <img src="imagenes/integrantes/christian.jpg" alt="Christian Alejandro Cruz Hernández" loading="lazy">
                         <h3>Christian Alejandro Cruz Hernández</h3>
-                        <p>Batería</p>
+                        <p>Batería 🥁</p>
                         <p>Tiene 23 años, mientras estudiaba en secundaria descubrió que la batería era su lugar seguro. Comenzó la carrera de "Derecho" pero no la terminó para dedicarse completamente a la música.</p>
                     </div>
                     <div class="integrante">
                         <img src="imagenes/integrantes/jessica.jpg" alt="Jessica Hernández Castellón" loading="lazy">
                         <h3>Jessica Hernández Castellón</h3>
-                        <p>Teclado</p>
+                        <p>Teclado 🎹</p>
                         <p>Desde muy pequeña ha tenido la fortuna de ser miembro de la iglesia católica. Fue invitada a ser parte de esta familia como tecladista, aunque no es músico de profesión, pero hace su mejor esfuerzo para aprender y mejorar en el grupo.</p>
                     </div>
                     <div class="integrante">
                         <img src="imagenes/integrantes/emanuel.jpg" alt="Emanuel Jesús Sánchez Insua" loading="lazy">
                         <h3>Emanuel Jesús Sánchez Insua</h3>
-                        <p>Guitarra eléctrica</p>
-                        <p>A los 15 años de edad descubrió su amor por la guitarra. Forma parte de Jueces5 desde sus comienzos.</p>
+                        <p>Guitarra eléctrica 🎸</p>
+                        <p>Tiene 20 años y desde pequeño asiste a la iglesia católica. Lleva tocando la guitarra desde los 14, aprendiendo de manera autodidacta. Aunque empezó con una guitarra acústica (como la mayoría de guitarristas), su meta era tener una eléctrica, gracias a Jueces5 logró esa meta. Apasionado del rock, la música se ha convertido en una parte esencial de su vida y su fe.</p>
                     </div>
                     <div class="integrante">
                         <img src="imagenes/integrantes/angel.jpg" alt="Ángel Luis González Osés" loading="lazy">
                         <h3>Ángel Luis González Osés</h3>
-                        <p>Guitarra acústica</p>
+                        <p>Guitarra acústica 🎸</p>
                         <p>Trabaja en el policlínico de "Santa Isabel de las Lajas" como "Jéfe de Departamento de Estadística" desde pequeño va a la iglesia católica y es miembro de Jueces 5 desde su fundación</p>
                     </div>
                 </div>
@@ -627,7 +678,7 @@
                     </figure>
                     <figure>
                         <img src="imagenes/grabacion_de_amor_de_dias_grises/a.jpg" alt="foto3" loading="lazy">
-                        <figcaption>Proceso de grabación de Amor de Dias Grises.</figcaption>
+                        <figcaption>Proceso de grabación de Amor de Días Grises.</figcaption>
                     </figure>
                     <figure>
                         <img src="imagenes/ajuria/a.jpg" alt="foto4" loading="lazy">
@@ -724,6 +775,7 @@
             </div>
         </div>
     </section>
+    <button class="btn-subir" title="Volver arriba">↑</button>
 </div>
     </main>
     
