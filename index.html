@@ -447,6 +447,7 @@
                 bottom: 15px;
                 right: 15px;
             }
+            
         }
 
         @media (max-width: 768px) {
@@ -611,6 +612,7 @@
                     </a>
                 </div>
             </section>
+            <button class="btn-subir" title="Volver arriba">↑</button>
         </div>
         
         <!-- Integrantes -->
@@ -775,7 +777,6 @@
             </div>
         </div>
     </section>
-    <button class="btn-subir" title="Volver arriba">↑</button>
 </div>
     </main>
     
@@ -852,8 +853,32 @@
     });
 }); 
         
-        // Mejorar rendimiento en móviles
-        document.addEventListener('touchstart', function() {}, {passive: true});
+                // Mejorar rendimiento en móviles
+                document.addEventListener('touchstart', function() {}, {passive: true});
+
+                // Botones de subir
+                document.querySelectorAll('.page').forEach(page => {
+                    const btnSubir = page.querySelector('.btn-subir');
+    
+                    if (btnSubir) {
+                        btnSubir.addEventListener('click', () => {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                        });
+                    });
+        
+                window.addEventListener('scroll', () => {
+                    if (page.classList.contains('active')) {
+                        if (window.scrollY > 300) {
+                            btnSubir.classList.add('visible');
+                        } else {
+                            btnSubir.classList.remove('visible');
+                        }
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
