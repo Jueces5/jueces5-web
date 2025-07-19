@@ -29,7 +29,7 @@
         
         /* Header */
         header {
-            background: linear-gradient(rgba(26, 46, 74, 0.7), rgba(26, 46, 74, 0.7)), 
+            background: linear-gradient(rgba(26, 46, 74, 0.5), rgba(26, 46, 74, 0.5)), 
             url('imagenes/grupo_3.JPG') no-repeat center center;
             background-size: cover;
             color: white;
@@ -231,22 +231,31 @@
         /* Galería - Optimizado para móviles */
         .galeria {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
             margin-top: 1.5rem;
         }
         
         .galeria img {
             width: 100%;
-            height: 150px;
+            height: 200px;
             object-fit: cover;
             border-radius: 8px;
             transition: transform 0.3s;
             cursor: pointer;
+            border: 2px solid #eee;
         }
         
         .galeria img:hover {
             transform: scale(1.03);
+            border-color: #1a2e4a;
+        }
+
+        .galeria figcaption {
+            margin-top: 0.5rem;
+            font-size: 0.9;
+            color: #555;
+            text-align: center;
         }
         
         /* Canciones - Optimizado para móviles */
@@ -299,15 +308,23 @@
 
         /* Estilos para la imagen del logo */
         .logo-image {
-            margin: 1rem auto;
+            margin: 1rem auto 2rem;
             text-align: center;
+            width: 100%;
         }
 
         .logo-image img {
-            max-width: 300px;
+            max-width: 500px;
+            width: 80%;
             height: auto;
+            right: 700px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-image img:hover {
+            transform: scale(1.02);
         }
 
         /* Botón de subir */
@@ -321,16 +338,18 @@
             border-radius: 50%;
             width: 50px;
             height: 50px;
-            font-size: 20px;
+            font-size: 24px;
             cursor: pointer;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 99;
+            z-index: 9999;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         .btn-subir.visible {
@@ -338,9 +357,54 @@
             visibility: visible;
         }
 
-        .btn-subir:hover {
+        .btn-subir:hover, .btn-subir:active {
             background-color: #4a6b9b;
             transform: translateY(-3px);
+        }
+
+        /* Estilos para el lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 4px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.7);
         }
         
         @media (min-width: 768px) {
@@ -397,7 +461,8 @@
             }
 
             .logo-image img {
-                max-width: 200px;
+                max-width: 300px;
+                width: 90%;
             }
             
             .integrantes-grid {
@@ -441,13 +506,27 @@
             }
 
             .btn-subir {
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
                 bottom: 15px;
                 right: 15px;
             }
-            
+
+            /* Asegurar que sea fácil de tocar */
+            .btn-subir {
+                padding: 0;
+                margin: 0;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            .btn-subir {
+                font-size: 24px;
+                -webkit-text-size-adjust: 100%;
+    }
         }
 
         @media (max-width: 768px) {
@@ -508,6 +587,10 @@
             
             .integrantes-grid {
                 grid-template-columns: 1fr 1fr;
+            }
+
+            .logo-image img {
+                max-width: 250px;
             }
         }
     </style>
@@ -612,7 +695,7 @@
                     </a>
                 </div>
             </section>
-            <button class="btn-subir" title="Volver arriba">↑</button>
+            <button class="btn-subir" title="Volver arriba">🡑</button>
         </div>
         
         <!-- Integrantes -->
@@ -664,6 +747,7 @@
                     </div>
                 </div>
             </section>
+            <button class="btn-subir" title="Volver arriba">🡑</button>
         </div>
         <!-- Galería -->
         <div id="galeria" class="page">
@@ -720,6 +804,7 @@
                     </figure>
                 </div>
             </section>
+            <button class="btn-subir" title="Volver arriba">🡑</button>
         </div>
 
         <!-- Canciones -->
@@ -777,7 +862,8 @@
             </div>
         </div>
     </section>
-</div>
+    <button class="btn-subir" title="Volver arriba">🡑</button>
+    </div>
     </main>
     
     <footer>
@@ -786,6 +872,13 @@
             <p>Música para la gloria de Dios</p>
         </div>
     </footer>
+
+    <!-- Lightbox para la galería -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-image" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
     
     <script>
         // Navegación entre páginas
@@ -814,10 +907,10 @@
         });
         
         // Simular reproducción de canciones
-       document.addEventListener('DOMContentLoaded', function() {
-    const playButtons = document.querySelectorAll('.play-btn');
+        document.addEventListener('DOMContentLoaded', function() {
+        const playButtons = document.querySelectorAll('.play-btn');
     
-    playButtons.forEach(button => {
+        playButtons.forEach(button => {
         button.addEventListener('click', async function() {
             const audioId = this.getAttribute('data-audio');
             const audio = document.getElementById(audioId);
@@ -848,37 +941,94 @@
             } catch (error) {
                 console.error('Error de reproducción:', error);
                 alert(`Error al reproducir: ${error.message}. Verifica la consola para detalles.`);
-            }
+                }
+            });
         });
-    });
-}); 
+        }); 
         
                 // Mejorar rendimiento en móviles
                 document.addEventListener('touchstart', function() {}, {passive: true});
 
-                // Botones de subir
+                // Botones de subir - Versión mejorada para móviles
+                document.addEventListener('DOMContentLoaded', function() {
+                // Crear botones si no existen
                 document.querySelectorAll('.page').forEach(page => {
-                    const btnSubir = page.querySelector('.btn-subir');
-    
-                    if (btnSubir) {
-                        btnSubir.addEventListener('click', () => {
-                            window.scrollTo({
-                                top: 0,
-                                behavior: 'smooth'
-                        });
-                    });
-        
-                window.addEventListener('scroll', () => {
-                    if (page.classList.contains('active')) {
-                        if (window.scrollY > 300) {
-                            btnSubir.classList.add('visible');
-                        } else {
-                            btnSubir.classList.remove('visible');
-                        }
+                    if (!page.querySelector('.btn-subir')) {
+                        const btn = document.createElement('button');
+                        btn.className = 'btn-subir';
+                        btn.title = 'Volver arriba';
+                        btn.innerHTML = '↑';
+                        btn.setAttribute('aria-label', 'Volver al inicio de la página');
+                        page.appendChild(btn);
                     }
                 });
+
+        // Controlar visibilidad y comportamiento
+        const handleScroll = () => {
+        document.querySelectorAll('.page.active .btn-subir').forEach(btn => {
+            if (window.scrollY > 300) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
             }
         });
+        };
+
+        // Configurar eventos
+        window.addEventListener('scroll', handleScroll, { passive: true });
+    
+        document.querySelectorAll('.btn-subir').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Mejorar respuesta táctil
+        btn.addEventListener('touchstart', () => {
+            btn.style.transform = 'scale(0.95)';
+        }, { passive: true });
+        
+        btn.addEventListener('touchend', () => {
+            btn.style.transform = '';
+        }, { passive: true });
+        });
+
+        // Ejecutar al cargar para verificar posición inicial
+         handleScroll();
+        });
+
+        // Lightbox para la galería
+        const lightbox = document.getElementById('lightbox'); 
+        const lightboxImg = document.getElementById('lightbox-image');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        // Abrir lightbox al hacer clic en una imagen
+        document.querySelectorAll('.galeria img').forEach(img => {
+            img.addEventListener('click', function() {
+                lightboxImg.src = this.src;
+                lightboxCaption.textContent = this.parentElement.querySelector('figcaption').textContent;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Evitar scroll
+            });
+        });
+
+        // Cerrar lightbox
+        document.querySelector('.close-lightbox').addEventListener('click', function() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Cerrar al hacer clic fuera de la imagen
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+                
     </script>
 </body>
 </html>
