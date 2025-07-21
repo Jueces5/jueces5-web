@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Jueces5 - Banda de música cristiana de Cuba. Música que inspira y fortalece la fe.">
+    <meta name="keywords" content="música cristiana, Cuba, Jueces5, adoración, banda cristiana">
+    <meta name="author" content="Jueces5">
     <title>Jueces5 - Música con Fe</title>
     <style>
         /* Estilos generales */
@@ -122,7 +124,11 @@
             border-radius: 8px;
             margin-bottom: 1.5rem;
             font-size: 0.95rem;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);      
         }
+
         
         /* FAQ */
         .faq-item {
@@ -131,6 +137,9 @@
             padding: 1.2rem;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);   
         }
         
         .faq-question {
@@ -144,8 +153,8 @@
         .redes-sociales {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 0.8rem !important;
+            margin-top: 0.8rem !important;
             flex-wrap: wrap;
         }
         
@@ -158,8 +167,8 @@
         }
 
         .red-social svg {
-                width: 32px;
-                height: 32px;
+                width: 24px !important;
+                height: 24px !important;
                 color: #1a2e4a;
                 transition: color 0.3s;
             }
@@ -206,6 +215,9 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             text-align: center;
             font-size: 0.85rem;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);   
         }
         
         .integrante img {
@@ -274,6 +286,9 @@
             justify-content: space-between;
             align-items: center;
             font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);   
         }
         
         .cancion:last-child {
@@ -406,7 +421,147 @@
             padding: 10px;
             background-color: rgba(0,0,0,0.7);
         }
+
+        .info-contacto {
+            font-size: 0.9rem !important;
+            margin: 0.5rem 0 !important;
+        }
+
+        .info-contacto p {
+            margin-bottom: 0.3rem !important;
+        }
+
+        .info-contacto a {
+            color: #1a2e4a;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .info-contacto a:hover {
+            color: #4a6b9b;
+            text-decoration: underline;
+        }
+
+        .info-contacto i {
+            color: #1a2e4a;
+            width: 20px;
+            text-align: center;
+        }
+
+         section:has(h2:contains("Conéctate con nosotros")) {
+            padding: 0.5rem 0 !important;
+            margin-top: 0.5rem;
+        }
+
+        section:has(h2:contains("Conéctate con nosotros")) h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .creditos {
+            font-size: 0.7rem;
+            opacity: 0.7;
+            margin-top: 0.5rem;
+            color: #aaa;
+            text-align: center;
+        }
+
         
+        .eventos {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .evento {
+            display: flex;
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);   
+        } 
+
+        .fecha {
+            background: #1a2e4a;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .detalles {
+            padding: 1rem;
+            flex-grow: 1;
+        }
+
+        .detalles h3 {
+            margin-bottom: 0.5rem;
+            color: #1a2e4a;
+        }
+     
+        .compartir {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .btn-compartir {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .btn-compartir[data-red="facebook"] {
+            background: #3b5998;
+            color: white;
+        }
+
+        .btn-compartir[data-red="whatsapp"] {
+            background: #25D366;
+            color: white;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #1a2e4a;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         @media (min-width: 768px) {
             .container {
                 width: 90%;
@@ -456,8 +611,8 @@
             }
 
             .red-social svg {
-                width: 28px;
-                height: 28px;
+                width: 26px !important;
+                height: 26px !important;
             }
 
             .logo-image img {
@@ -508,25 +663,25 @@
             .btn-subir {
                 width: 45px;
                 height: 45px;
-                font-size: 20px;
+                font-size: 24px;
                 bottom: 15px;
                 right: 15px;
-            }
-
-            /* Asegurar que sea fácil de tocar */
-            .btn-subir {
                 padding: 0;
                 margin: 0;
                 -webkit-user-select: none;
                 -moz-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
+                -webkit-text-size-adjust: 100%;
             }
 
-            .btn-subir {
-                font-size: 24px;
-                -webkit-text-size-adjust: 100%;
-    }
+            .info-contacto {
+                font-size: 0.95rem !important;
+            }
+
+            section:has(h2:contains("Conéctate con nosotros")) h2 {
+                font-size: 1.3rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -629,6 +784,27 @@
             </section>
 
             <section>
+                <h2>Próximos Eventos</h2>
+                <div class="eventos">
+                    <div class="evento">
+                        <div class="fecha">22/7/2025</div>
+                        <div class="detalles">
+                            <h3>New York</h3>
+                            <p>Ejemplo</p>
+                        </div>
+                    </div>
+                    <div class="evento">
+                        <div class="fecha">28/7/2025</div>
+                        <div class="detalles">
+                            <h3>España</h3>
+                            <p>Ejemplo</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </section>
+
+            <section>
                 <h2>Preguntas Frecuentes</h2>
                 
                 <div class="faq-item">
@@ -670,32 +846,7 @@
                     <div class="faq-question">¿Qué proyectos tienen para el futuro?</div>
                     <p>Estamos trabajando en nuestro actual álbum (Adorarte), tambien celebramos cumpleaños y otras actividades fuera del ámbito eclesiástico, porque creemos que la alegría de Dios debe llegar a todos los espacios. Una sonrisa, un momento de conexión a través de la música, puede ser el mejor regalo para alguien que necesita levantar el ánimo.</p>
                 </div>
-            </section>
-            
-            <section>
-                <h2>Conéctate con nosotros</h2>
-                <div class="redes-sociales">
-                    <a href="https://www.instagram.com/juec.es5?igsh=YWozam4zb3VsMG5s" class="red-social" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=100090258477679" class="red-social" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.youtube.com/@jueces5?si=tlHLLghrozOim1vh" class="red-social" aria-label="YouTube">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                        </svg>
-                    </a>
-                </div>
-            </section>
-            <button class="btn-subir" title="Volver arriba">🡑</button>
+            </section>                
         </div>
         
         <!-- Integrantes -->
@@ -747,8 +898,8 @@
                     </div>
                 </div>
             </section>
-            <button class="btn-subir" title="Volver arriba">🡑</button>
         </div>
+
         <!-- Galería -->
         <div id="galeria" class="page">
             <section>
@@ -788,7 +939,7 @@
                     </figure>
                     <figure>
                         <img src="imagenes/la-habana/a.jpg" alt="foto" loading="lazy">
-                        <figcaption>Teatro de los <a href="https://www.focolare.org/es/" target="_blank" rel="noopener noreferrer">Focolares</a>, La Habana.</figcaption>
+                        <figcaption>Concierto en el teatro de los <a href="https://www.focolare.org/es/" target="_blank" rel="noopener noreferrer">Focolares</a>, La Habana.</figcaption>
                     </figure>
                     <figure>
                         <img src="imagenes/virgen_de_la_caridad_cartagena/a.jpg" alt="foto" loading="lazy">
@@ -824,7 +975,6 @@
                     </figure>
                 </div>
             </section>
-            <button class="btn-subir" title="Volver arriba">🡑</button>
         </div>
 
         <!-- Canciones -->
@@ -882,14 +1032,62 @@
                     </div>
                 </div>
             </section>
-            <button class="btn-subir" title="Volver arriba">🡑</button>
+        </div>
+       <section>
+            <h2>Conéctate con nosotros</h2>
+    
+            <!-- Añade este div para la información de contacto -->
+            <div class="info-contacto" style="text-align: center; margin: 1.5rem 0; font-size: 1.1rem;">
+            <p style="margin-bottom: 0.8rem;">
+                <i class="fas fa-phone-alt" style="margin-right: 8px;"></i>
+                Teléfono: <a href="tel:+5351234567">+53 51234567</a>
+            </p>
+            <p>
+                <i class="fas fa-envelope" style="margin-right: 8px;"></i>
+                Email: <a href="mailto:contacto@jueces5.com">jueces5000gmail.com</a>
+            </p>
+        </div>
+    
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com/juec.es5?igsh=YWozam4zb3VsMG5s" class="red-social" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                       <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100090258477679" class="red-social" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@jueces5?si=tlHLLghrozOim1vh" class="red-social" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Botones para compartir -->
+            <div class="compartir">
+                <button class="btn-compartir" data-red="facebook">
+                   <i class="fab fa-facebook"></i> Compartir
+                </button>
+                <button class="btn-compartir" data-red="whatsapp">
+                   <i class="fab fa-whatsapp"></i> Compartir
+                </button>
+            </div>
+        </section>
+        <div class="preloader">
+            <div class="spinner"></div>
         </div>
     </main>
     
     <footer>
         <div class="container">
             <p>&copy; 2023 Jueces5 - Todos los derechos reservados</p>
-            <p>Música para la gloria de Dios</p>
+            <p class="creditos">Desarrollo web: <a href="mailto:tu@email.com" style="color:inherit; text-decoration:none;">Emanuel.J</a></p>
         </div>
     </footer>
 
@@ -1048,7 +1246,37 @@
                 document.body.style.overflow = '';
             }
         });
-                
+
+            document.querySelectorAll('.btn-compartir').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const url = encodeURIComponent(window.location.href);
+                const text = encodeURIComponent("Mira esta página de Jueces5");
+        
+                if(this.dataset.red === 'facebook') {
+                   window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+                } else if(this.dataset.red === 'whatsapp') {
+                   window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+                }
+            });
+        });      
+            window.addEventListener('load', function() {
+            document.querySelector('.preloader').style.opacity = '0';
+            setTimeout(() => {
+                document.querySelector('.preloader').style.display = 'none';
+            }, 500);
+        });  
+            // Intersection Observer para animaciones
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.historia, .faq-item, .integrante, .cancion, .evento').forEach(el => {
+                observer.observe(el);
+            });
     </script>
 </body>
 </html>
