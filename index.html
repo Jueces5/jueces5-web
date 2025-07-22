@@ -7,7 +7,7 @@
     <meta name="author" content="Jueces5">
     <title>Jueces5 - Música con Fe</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="imagenes/grupo_3.jpg" as="image">
+    <link rel="preload" href="imagenes/grupo_3.webp" as="image">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="estilos.min.css">
     <style>
@@ -29,7 +29,7 @@
         .integrante{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);text-align:center;font-size:.85rem;opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}
         .integrante img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin-bottom:.8rem;border:2px solid #1a2e4a}
         .integrante p:first-of-type{font-weight:700;color:#1a2e4a;background-color:#e8f0fe;padding:.3rem .6rem;border-radius:15px;display:inline-block;margin:.5rem 0;font-size:.9rem}
-        .galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin-top:1.5rem}.galeria img{width:100%;height:200px;object-fit:cover;border-radius:8px;transition:transform .3s;cursor:pointer;border:2px solid #eee}.galeria img:hover{transform:scale(1.03);border-color:#1a2e4a}.galeria figcaption{margin-top:.5rem;font-size:.9;color:#555;text-align:center}.canciones-lista{background:#fff;padding:1.2rem;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.1);margin-top:1.5rem}.cancion{padding:.8rem 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}.cancion:last-child{border-bottom:none}.cancion-info h3{font-size:1rem;margin-bottom:.2rem}.cancion-info p{font-size:.8rem;color:#666}.play-btn{background:#1a2e4a;color:#fff;border:none;padding:.4rem .8rem;border-radius:5px;cursor:pointer;transition:background .3s;font-size:.8rem;white-space:nowrap}.play-btn:hover{background:#4a6b9b}.logo-image{margin:1rem auto 2rem;text-align:center;width:100%}.logo-image img{max-width:500px;width:80%;height:auto;right:700px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:transform .3s ease}.logo-image img:hover{transform:scale(1.02)}.btn-subir{position:fixed;bottom:20px;right:20px;background-color:#1a2e4a;color:#fff;border:none;border-radius:50%;width:50px;height:50px;font-size:24px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;visibility:hidden;transition:all .3s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation}.btn-subir.visible{opacity:1;visibility:visible}.btn-subir:hover,.btn-subir:active{background-color:#4a6b9b;transform:translateY(-3px)}.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.9);z-index:9999;justify-content:center;align-items:center}.lightbox img{max-width:90%;max-height:90%;border-radius:4px}.lightbox.active{display:flex}.close-lightbox{position:absolute;top:20px;right:30px;color:#fff;font-size:40px;font-weight:700;cursor:pointer}.lightbox-caption{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#fff;padding:10px;background-color:rgba(0,0,0,.7)}.info-contacto{font-size:.9rem!important;margin:.5rem 0!important}.info-contacto p{margin-bottom:.3rem!important}.info-contacto a{color:#1a2e4a;text-decoration:none;transition:color .3s}.info-contacto a:hover{color:#4a6b9b;text-decoration:underline}.info-contacto i{color:#1a2e4a;width:20px;text-align:center}section:has(h2:contains("Conéctate con nosotros")){padding:.5rem 0!important;margin-top:.5rem!important}section:has(h2:contains("Conéctate con nosotros")) h2{font-size:1.2rem;margin-bottom:.8rem}.creditos{font-size:.7rem;opacity:.7;margin-top:.5rem;color:#aaa;text-align:center}.eventos{max-width:600px;margin:0 auto}.evento{display:flex;background:#fff;margin-bottom:1rem;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}.fecha{background:#1a2e4a;color:#fff;padding:1rem;text-align:center;min-width:100px}.detalles{padding:1rem;flex-grow:1}.detalles h3{margin-bottom:.5rem;color:#1a2e4a}.compartir{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0}.btn-compartir{padding:.5rem 1rem;border:none;border-radius:4px;display:flex;align-items:center;gap:.5rem;cursor:pointer}.btn-compartir[data-red=facebook]{background:#3b5998;color:#fff}.btn-compartir[data-red=whatsapp]{background:#25d366;color:#fff}.preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,.9);display:flex;justify-content:center;align-items:center;z-index:9999;transition:opacity .5s}.spinner{width:50px;height:50px;border:5px solid #f3f3f3;border-top:5px solid #1a2e4a;border-radius:50%;animation:spin 1s linear infinite}.visible{opacity:1;transform:translateY(0)}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@media (min-width:768px){.container{width:90%;padding:20px}.logo{font-size:2.5rem}.slogan{font-size:1rem}nav ul{justify-content:center}nav li{margin:0 1rem}nav a{font-size:1rem;padding:.5rem 1rem}section{padding:2rem 0}h2{font-size:1.8rem;margin-bottom:2rem}.historia,.faq-item{font-size:1rem}.faq-question{font-size:1.2rem}.red-social{font-size:2rem}.red-social svg{width:26px!important;height:26px!important}.logo-image img{max-width:300px;width:90%}.integrantes-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem}.integrante{font-size:.9rem}.integrante img{width:120px;height:120px}.integrante p:first-of-type{font-size:1rem;padding:.4rem .8rem}.galeria{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.galeria img{height:180px}.cancion{font-size:1rem}.cancion-info h3{font-size:1.1rem}.play-btn{padding:.5rem 1rem;font-size:.9rem}.btn-subir{width:45px;height:45px;font-size:24px;bottom:15px;right:15px;padding:0;margin:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-text-size-adjust:100%}.info-contacto{font-size:.95rem!important}section:has(h2:contains("Conéctate con nosotros")) h2{font-size:1.3rem}}@media (max-width:768px){header{min-height:150px;padding:1.5rem 0}}@media (min-width:992px){.integrantes-grid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.galeria{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.galeria img{height:200px}}@media (max-width:480px){.container{width:100%;padding:10px}nav ul{padding:.6rem .5rem;justify-content:flex-start;padding-left:10px;padding-right:10px}nav li{margin:0 .3rem .5rem}nav a{padding:.4rem .6rem;font-size:(.9rem,2.2vw,.9rem)}.historia,.faq-item{padding:1rem}.faq-question{font-size:1rem}.red-social{font-size:1.5rem}.integrantes-grid{grid-template-columns:1fr 1fr}.logo-image img{max-width:250px}} 
+        .galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin-top:1.5rem}.galeria img{width:100%;height:200px;object-fit:cover;border-radius:8px;transition:transform .3s;cursor:pointer;border:2px solid #eee}.galeria img:hover{transform:scale(1.03);border-color:#1a2e4a}.galeria figcaption{margin-top:.5rem;font-size:.9;color:#555;text-align:center}.canciones-lista{background:#fff;padding:1.2rem;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.1);margin-top:1.5rem}.cancion{padding:.8rem 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}.cancion:last-child{border-bottom:none}.cancion-info h3{font-size:1rem;margin-bottom:.2rem}.cancion-info p{font-size:.8rem;color:#666}.play-btn{background:#1a2e4a;color:#fff;border:none;padding:.4rem .8rem;border-radius:5px;cursor:pointer;transition:background .3s;font-size:.8rem;white-space:nowrap}.play-btn:hover{background:#4a6b9b}.logo-image{margin:1rem auto 2rem;text-align:center;width:100%}.logo-image img{max-width:500px;width:80%;height:auto;right:700px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:transform .3s ease}.logo-image img:hover{transform:scale(1.02)}.btn-subir{position:fixed;bottom:20px;right:20px;background-color:#1a2e4a;color:#fff;border:none;border-radius:50%;width:50px;height:50px;font-size:24px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;visibility:hidden;transition:all .3s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation}.btn-subir.visible{opacity:1;visibility:visible}.btn-subir:hover,.btn-subir:active{background-color:#4a6b9b;transform:translateY(-3px)}.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.9);z-index:9999;justify-content:center;align-items:center}.lightbox img{max-width:90%;max-height:90%;border-radius:4px}.lightbox.active{display:flex}.close-lightbox{position:absolute;top:20px;right:30px;color:#fff;font-size:40px;font-weight:700;cursor:pointer}.lightbox-caption{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#fff;padding:10px;background-color:rgba(0,0,0,.7)}.info-contacto{font-size:.9rem!important;margin:.5rem 0!important}.info-contacto p{margin-bottom:.3rem!important}.info-contacto a{color:#1a2e4a;text-decoration:none;transition:color .3s}.info-contacto a:hover{color:#4a6b9b;text-decoration:underline}.info-contacto i{color:#1a2e4a;width:20px;text-align:center}section:has(h2:contains("Conéctate con nosotros")){padding:.5rem 0!important;margin-top:.5rem!important}section:has(h2:contains("Conéctate con nosotros")) h2{font-size:1.2rem;margin-bottom:.8rem}.creditos{font-size:.7rem;opacity:.7;margin-top:.5rem;color:#aaa;text-align:center}.eventos{max-width:600px;margin:0 auto}.evento{display:flex;background:#fff;margin-bottom:1rem;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}.fecha{background:#1a2e4a;color:#fff;padding:1rem;text-align:center;min-width:100px}.detalles{padding:1rem;flex-grow:1}.detalles h3{margin-bottom:.5rem;color:#1a2e4a}.compartir{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0}.btn-compartir{padding:.5rem 1rem;border:none;border-radius:4px;display:flex;align-items:center;gap:.5rem;cursor:pointer}.btn-compartir[data-red=facebook]{background:#3b5998;color:#fff}.btn-compartir[data-red=whatsapp]{background:#25d366;color:#fff}.visible{opacity:1;transform:translateY(0)}@media (min-width:768px){.container{width:90%;padding:20px}.logo{font-size:2.5rem}.slogan{font-size:1rem}nav ul{justify-content:center}nav li{margin:0 1rem}nav a{font-size:1rem;padding:.5rem 1rem}section{padding:2rem 0}h2{font-size:1.8rem;margin-bottom:2rem}.historia,.faq-item{font-size:1rem}.faq-question{font-size:1.2rem}.red-social{font-size:2rem}.red-social svg{width:26px!important;height:26px!important}.logo-image img{max-width:300px;width:90%}.integrantes-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem}.integrante{font-size:.9rem}.integrante img{width:120px;height:120px}.integrante p:first-of-type{font-size:1rem;padding:.4rem .8rem}.galeria{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.galeria img{height:180px}.cancion{font-size:1rem}.cancion-info h3{font-size:1.1rem}.play-btn{padding:.5rem 1rem;font-size:.9rem}.btn-subir{width:45px;height:45px;font-size:24px;bottom:15px;right:15px;padding:0;margin:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-text-size-adjust:100%}.info-contacto{font-size:.95rem!important}section:has(h2:contains("Conéctate con nosotros")) h2{font-size:1.3rem}}@media (max-width:768px){header{min-height:150px;padding:1.5rem 0}}@media (min-width:992px){.integrantes-grid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.galeria{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.galeria img{height:200px}}@media (max-width:480px){.container{width:100%;padding:10px}nav ul{padding:.6rem .5rem;justify-content:flex-start;padding-left:10px;padding-right:10px}nav li{margin:0 .3rem .5rem}nav a{padding:.4rem .6rem;font-size:(.9rem,2.2vw,.9rem)}.historia,.faq-item{padding:1rem}.faq-question{font-size:1rem}.red-social{font-size:1.5rem}.integrantes-grid{grid-template-columns:1fr 1fr}.logo-image img{max-width:250px}} 
     </style>
 </head>
 <body>
@@ -37,7 +37,7 @@
         <div class="container">
             <div class="logo">Jueces5</div>
             <div class="logo-image">
-                <img src="imagenes/grupo en B y N.jpg" alt="Logo de Jueces5" loading="lazy" width="500" height="300">
+                <img src="imagenes/grupo en B y N.webp" alt="Logo de Jueces5" loading="lazy" width="500" height="300">
             </div>
             <div class="slogan">Una banda apasionada por crear música que inspire emociones y aumente la fe de nuestra audiencia</div>
         </div>
@@ -171,71 +171,71 @@
                 <h2>Galería</h2>
                 <div class="galeria">
                     <figure>
-                        <img src="imagenes/concierto_de_resurreccion/a.jpg" alt="foto1" loading="lazy">
+                        <img src="imagenes/concierto_de_resurreccion/a.webp" alt="foto1" loading="lazy">
                         <figcaption>Concierto por resurrección, Santa Isabel de las Lajas.</figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/pascua_joven/a.JPG" alt="foto2" loading="lazy">
+                        <img src="imagenes/pascua_joven/a.webp" alt="foto2" loading="lazy">
                         <figcaption>Concierto en la Pascua Jóven, <a href="https://es.wikipedia.org/wiki/La_Habana" target="_blank" rel="noopener noreferrer">La Habana.</a></figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/grabacion_de_amor_de_dias_grises/a.jpg" alt="foto3" loading="lazy">
+                        <img src="imagenes/grabacion_de_amor_de_dias_grises/a.webp" alt="foto3" loading="lazy">
                         <figcaption>Proceso de grabación de <a href="https://youtu.be/pZGADE6x05w?si=OY9KWLV8Slt31G3a" target="_blank" rel="noopener noreferrer">Amor de Días Grises</a></figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/ajuria/a.jpg" alt="foto4" loading="lazy">
+                        <img src="imagenes/ajuria/a.webp" alt="foto4" loading="lazy">
                         <figcaption>Concierto de navidad en <a href="https://www.ecured.cu/Ajuria_(Santa_Isabel_de_las_Lajas)" target="_blank" rel="noopener noreferrer">Ajuria</a></figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/lajas/b.jpg" alt="foto5" loading="lazy">
+                        <img src="imagenes/lajas/b.webp" alt="foto5" loading="lazy">
                         <figcaption>Concierto en la <a href="https://campaners.com/php/campanar.php?numer=5959" target="_blank" rel="noopener noreferrer">"Parroquia San Antonio de Padua"</a>, Santa Isabel de las Lajas.</figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/cinelajas/a.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/cinelajas/a.webp" alt="foto" loading="lazy">
                         <figcaption>Cine, Santa Isabel de las Lajas.</figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/mariapolis/b.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/mariapolis/b.webp" alt="foto" loading="lazy">
                         <figcaption>Encuentro en la <a href="https://www.focolare.org/es/mariapolis/" target="_blank" rel="noopener noreferrer">"Mariapolis"</a>, <a href="https://es.wikipedia.org/wiki/Camag%C3%BCey" target="_blank" rel="noopener noreferrer">Camagüey</a></figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/cruces_2023/a.JPG" alt="foto" loading="lazy">
+                        <img src="imagenes/cruces_2023/a.webp" alt="foto" loading="lazy">
                         <figcaption>Iglesia Católica de <a href="https://es.wikipedia.org/wiki/Cruces_(Cuba)" target="_blank" rel="noopener noreferrer">Cruces </a>(Parroquia La Santa Cruz).</figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/la-habana/a.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/la-habana/a.webp" alt="foto" loading="lazy">
                         <figcaption>Concierto en el teatro de los <a href="https://www.focolare.org/es/" target="_blank" rel="noopener noreferrer">Focolares</a>, La Habana.</figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/virgen_de_la_caridad_cartagena/a.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/virgen_de_la_caridad_cartagena/a.webp" alt="foto" loading="lazy">
                         <figcaption>Concierto en el santuario diocesano de la Virgen de la Caridad, <a href="https://www.ecured.cu/Cartagena_(Cienfuegos)" target="_blank" rel="noopener noreferrer">Cartagena/Rodas.</a></figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/JDJ/a.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/JDJ/a.webp" alt="foto" loading="lazy">
                         <figcaption>Concierto por la <a href="https://www.sepaju.es/jdj-jornada-de-juventud-ork" target="_blank" rel="noopener noreferrer">JDJ (Jornada Diocesana de la Juventud)</a>, <a href="https://es.wikipedia.org/wiki/Cienfuegos    " target="_blank" rel="noopener noreferrer">Cienfuegos.</a></figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/asuncion_de_la_virgen_maria/a.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/asuncion_de_la_virgen_maria/a.webp" alt="foto" loading="lazy">
                         <figcaption>Celebrando la fiesta de la asunción de la Virgen María en Guabairo.</figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/señora_del_carmen/a.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/señora_del_carmen/a.webp" alt="foto" loading="lazy">
                         <figcaption>Concierto por la fiesta patronal de nuestra Señora del Carmen, <a href="https://es.wikipedia.org/wiki/Rodas_(Cuba)" target="_blank" rel="noopener noreferrer">Rodas.</a></figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/festival_juvenil/a.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/festival_juvenil/a.webp" alt="foto" loading="lazy">
                         <figcaption>Fesitival Juvenil Vocacional en Cienfuegos.</figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/boda_yisel/a.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/boda_yisel/a.webp" alt="foto" loading="lazy">
                         <figcaption>Boda de un miembro de nuestra parroquia <a href="https://campaners.com/php/campanar.php?numer=5959" target="_blank" rel="noopener noreferrer">"Parroquia San Antonio de Padua"</a></figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/primer_concierto/a.jpg" alt="foto" loading="lazy">
+                        <img src="imagenes/primer_concierto/a.webp" alt="foto" loading="lazy">
                         <figcaption>Primera actuación en un encuentro de Jóvenes</figcaption>
                     </figure>
                     <figure>
-                        <img src="imagenes/primer_instrumental/a.png" alt="foto" loading="lazy">
+                        <img src="imagenes/primer_instrumental/a.webp" alt="foto" loading="lazy">
                         <figcaption>Primer instrumental</figcaption>
                     </figure>
                 </div>
@@ -339,9 +339,6 @@
                 </button>
             </div>
         </section>
-        <div class="preloader">
-            <div class="spinner"></div>
-        </div>
     </main>
     <footer>
         <div class="container">
@@ -495,12 +492,6 @@
                 }
             });
         });      
-            window.addEventListener('load', function() {
-            document.querySelector('.preloader').style.opacity = '0';
-            setTimeout(() => {
-                document.querySelector('.preloader').style.display = 'none';
-            }, 500);
-        });  
             // Intersection Observer para animaciones
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
