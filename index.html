@@ -8,7 +8,11 @@
     <title>Jueces5 - Música con Fe</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="preload" href="imagenes/grupo_3.webp" as="image">
+    <link rel="preload" href="imagenes/grupo_3.webp" as="image" imagesrcset="imagenes/grupo_3-small.webp 480w, imagenes/grupo_3-medium.webp 768w, imagenes/grupo_3-large.webp 1200w" imagesizes="(max-width: 600px) 480px, (max-width: 1000px) 768px, 1200px">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://your-image-cdn.com" crossorigin>
+    <link rel="dns-prefetch" href="https://your-image-cdn.com">
     <link rel="stylesheet" href="estilos.min.css">
     <style>
        *{box-sizing:border-box;margin:0;padding:0}body{font-family:'Arial',sans-serif;line-height:1.6;color:#333;background-color:#f9f9f9;font-size:16px}
@@ -492,6 +496,31 @@
                 }
             });
         });      
+            // Intersection Observer para lazy loading de imágenes
+            document.addEventListener('DOMContentLoaded', function() {
+                const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+        
+                if ('IntersectionObserver' in window) {
+                    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                let lazyImage = entry.target;
+                                lazyImage.src = lazyImage.dataset.src || lazyImage.src;
+                                lazyImageObserver.unobserve(lazyImage);
+                            }
+                        });
+                    }, {
+                        rootMargin: '200px 0px' // Carga 200px antes de que entre en vista
+                    });
+
+                    lazyImages.forEach(function(lazyImage) {
+                        lazyImageObserver.observe(lazyImage);
+                    });
+                }
+            });
+
+
+
             // Intersection Observer para animaciones
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -513,6 +542,26 @@
                     });
                 });
             }
+            // Detecta conexión y carga imágenes adecuadas
+            function loadAdaptiveImages() {
+                const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+                let quality = 'high';
+    
+                if (connection) {
+                    if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+                        quality = 'low';
+                    } else if (connection.effectiveType === '3g') {
+                        quality = 'medium';
+                    }
+                }
+    
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    const src = img.getAttribute('data-src');
+                    img.src = quality === 'high' ? src : src.replace('.webp', `-${quality}.webp`);
+                });
+            }
+
+            window.addEventListener('load', loadAdaptiveImages);
     </script>
 </body>
 </html>
