@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" style="scroll-behavior: smooth;">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jueces5 - Banda de música cristiana de Cuba. Música que inspira y fortalece la fe.">
@@ -14,26 +14,85 @@
     <link rel="preconnect" href="https://your-image-cdn.com" crossorigin>
     <link rel="dns-prefetch" href="https://your-image-cdn.com">
     <link rel="stylesheet" href="estilos.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-       *{box-sizing:border-box;margin:0;padding:0}body{font-family:'Arial',sans-serif;line-height:1.6;color:#333;background-color:#f9f9f9;font-size:16px}
-       .container{width:95%;max-width:1200px;margin:0 auto;padding:15px}header{background:linear-gradient(rgba(26,46,74,0.5),rgba(26,46,74,0.5)),
-        url('imagenes/grupo_3.webp') no-repeat center center;background-size:cover;color:#fff;padding:2.5rem 0;text-align:center;position:relative;min-height:200px;display:flex;align-items:center}
-        .logo{font-size:2rem;font-weight:700;margin-bottom:.5rem}.slogan{font-style:italic;color:#a8c6f7;font-size:.9rem}
-        nav{background-color:#2c3e50;position:sticky;top:0;z-index:100;padding:100;overflow-x:auto;-webkit-overflow-scrolling:touch}
+       :root {--primary-color: #1a2e4a; --secondary-color: #4a6b9b; --accent-color: #e8b959; --light-color: #f8f5ee; --text-color: #333; --text-light: #777; --white: #fff; --black: #000;}
+       *{box-sizing:border-box;margin:0;padding:0}body{font-family:'Open Sans',sans-serif;line-height:1.6;color: var(--text-color);background-color: var(--light-color);font-size:16px} h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif; font-weight: 700;}
+       .container{width:95%;max-width:1200px;margin:0 auto;padding:15px}header{background:linear-gradient(rgba(26,46,74,0.7)),
+        url('imagenes/grupo_3.webp') no-repeat center center;background-size:cover;color:var(--white);padding:3rem 0;text-align:center;position:relative;min-height:300px;display:flex;align-items:center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);}
+        .logo{font-size:3rem;font-weight:700;margin-bottom:0.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); color: var(--white); font-family: 'Montserrat', sans-serif;}.slogan{font-style:italic;color:var(--accent-color);font-size:1.2rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); margin-top: 1rem;}
+        nav{background-color: var(--primary-color);position:sticky;top:0;z-index:100;padding:0.5rem 0; overflow-x:auto;-webkit-overflow-scrolling:touch; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}
         nav ul{display:flex;justify-content:center;list-style:none;padding:0;margin:0 auto;flex-wrap:nowrap;overflow-x:auto;max-width:100%;flex-wrap:wrap;-webkit-overflow-scrolling:touch;white-space:nowrap}
         nav li{display:inline-block;margin:0 .8rem;flex:0 0 auto;flex-shrink:0}
-        nav a{color:#fff;text-decoration:none;font-weight:700;padding:.4rem .8rem;border-radius:5px;transition:background-color .3s;font-size:clamp(.8rem,2.5vw,1rem);display:inline-block;white-space:nowrap}
-        nav a:hover,nav a:active{background-color:#4a6b9b}section{padding:1.5rem 0;border-bottom:1px solid #ddd}h2{text-align:center;margin-bottom:1.5rem;color:#1a2e4a;font-size:1.5rem}
+        nav a{color:var(--white);text-decoration:none;font-weight:600; padding:0.5rem 1rem; border-radius:5px;transition:all 0.3s;font-size:clamp(0.9rem,2.5vw,1rem);display:inline-block;white-space:nowrap; position: relative;}
+        nav a:hover,nav a:active{background-color:var(--secondary-color); transform: translate(-2px);}
+        nav a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background: var(--accent-color); transition: all 0.3s; transform: translateX(-50%)}nav a:hover::after { width: 70%;}
+        section{padding:2rem 0;border-bottom:1px solid rgba(0, 0, 0, 0.1); background-color: var(--light-color); } h2{text-align:center;margin-bottom:2rem;color: var(--primary-color);font-size:2rem; font-family: 'Montserrat', sans-serif; position: relative; padding-bottom: 0.5rem;}
         .historia{background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,.1);padding:1.5rem;border-radius:8px;margin-bottom:1.5rem;font-size:.95rem;opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}
-        .faq-item{margin-bottom:1.2rem;background:#fff;padding:1.2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}
+        .faq-item{margin-bottom:0.5rem;background:#fff;padding:1.2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}
         .faq-question{font-weight:700;color:#1a2e4a;font-size:1.1rem;margin-bottom:.5rem}.redes-sociales{display:flex;justify-content:center;gap:.8rem!important;margin-top:.8rem!important;flex-wrap:wrap}
-        .red-social{font-size:1.8rem;color:#1a2e4a;transition:color .3s;display:inline-block;padding:.5rem}.red-social svg{width:24px!important;height:24px!important;color:#1a2e4a;transition:color .3s}
-        .red-social:hover svg{color:#4a6b9b}.red-social:hover{color:#4a6b9b}footer{background-color:#1a2e4a;color:#fff;text-align:center;padding:1.5rem 0;margin-top:1.5rem;font-size:.9rem}
+        .red-social{font-size:1.8rem;color: var(--primary-color);transition:all .3s;display:inline-block;padding:.8rem; background: rgba(232, 185, 89, 0.1); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;} .red-social:hover { color: var(--secondary-color); background: rgba(232, 185, 89, 0.2); transform: translateY(-3px);} .red-social svg{width:24px!important;height:24px!important;color: var(--primary-color);transition:all .3s}
+        .red-social:hover svg{color:#4a6b9b; transform: scale(1.1);}
+        footer{background-color: var(--primary-color);color:var(--white);text-align:center;padding:2rem 0;margin-top:3rem;font-size:1rem; position: relative;} footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));}
         .page{display:none}.page.active{display:block}.integrantes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1.2rem;margin-top:1.5rem}
-        .integrante{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);text-align:center;font-size:.85rem;opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}
-        .integrante img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin-bottom:.8rem;border:2px solid #1a2e4a}
-        .integrante p:first-of-type{font-weight:700;color:#1a2e4a;background-color:#e8f0fe;padding:.3rem .6rem;border-radius:15px;display:inline-block;margin:.5rem 0;font-size:.9rem}
-        .galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin-top:1.5rem}.galeria img{width:100%;height:200px;object-fit:cover;border-radius:8px;transition:transform .3s;cursor:pointer;border:2px solid #eee}.galeria img:hover{transform:scale(1.03);border-color:#1a2e4a}.galeria figcaption{margin-top:.5rem;font-size:.9;color:#555;text-align:center}.canciones-lista{background:#fff;padding:1.2rem;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.1);margin-top:1.5rem}.cancion{padding:.8rem 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}.cancion:last-child{border-bottom:none}.cancion-info h3{font-size:1rem;margin-bottom:.2rem}.cancion-info p{font-size:.8rem;color:#666}.play-btn{background:#1a2e4a;color:#fff;border:none;padding:.4rem .8rem;border-radius:5px;cursor:pointer;transition:background .3s;font-size:.8rem;white-space:nowrap}.play-btn:hover{background:#4a6b9b}.logo-image{margin:1rem auto 2rem;text-align:center;width:100%}.logo-image img{max-width:500px;width:80%;height:auto;right:700px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:transform .3s ease}.logo-image img:hover{transform:scale(1.02)}.btn-subir{position:fixed;bottom:20px;right:20px;background-color:#1a2e4a;color:#fff;border:none;border-radius:50%;width:50px;height:50px;font-size:24px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;visibility:hidden;transition:all .3s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation}.btn-subir.visible{opacity:1;visibility:visible}.btn-subir:hover,.btn-subir:active{background-color:#4a6b9b;transform:translateY(-3px)}.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.9);z-index:9999;justify-content:center;align-items:center}.lightbox img{max-width:90%;max-height:90%;border-radius:4px}.lightbox.active{display:flex}.close-lightbox{position:absolute;top:20px;right:30px;color:#fff;font-size:40px;font-weight:700;cursor:pointer}.lightbox-caption{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#fff;padding:10px;background-color:rgba(0,0,0,.7)}.info-contacto{font-size:.9rem!important;margin:.5rem 0!important}.info-contacto p{margin-bottom:.3rem!important}.info-contacto a{color:#1a2e4a;text-decoration:none;transition:color .3s}.info-contacto a:hover{color:#4a6b9b;text-decoration:underline}.info-contacto i{color:#1a2e4a;width:20px;text-align:center}section:has(h2:contains("Conéctate con nosotros")){padding:.5rem 0!important;margin-top:.5rem!important}section:has(h2:contains("Conéctate con nosotros")) h2{font-size:1.2rem;margin-bottom:.8rem}.creditos{font-size:.7rem;opacity:.7;margin-top:.5rem;color:#aaa;text-align:center}.eventos{max-width:600px;margin:0 auto}.evento{display:flex;background:#fff;margin-bottom:1rem;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(20px)}.fecha{background:#1a2e4a;color:#fff;padding:1rem;text-align:center;min-width:100px}.detalles{padding:1rem;flex-grow:1}.detalles h3{margin-bottom:.5rem;color:#1a2e4a}.compartir{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0}.btn-compartir{padding:.5rem 1rem;border:none;border-radius:4px;display:flex;align-items:center;gap:.5rem;cursor:pointer}.btn-compartir[data-red=facebook]{background:#3b5998;color:#fff}.btn-compartir[data-red=whatsapp]{background:#25d366;color:#fff}.visible{opacity:1;transform:translateY(0)}@media (min-width:768px){.container{width:90%;padding:20px}.logo{font-size:2.5rem}.slogan{font-size:1rem}nav ul{justify-content:center}nav li{margin:0 1rem}nav a{font-size:1rem;padding:.5rem 1rem}section{padding:2rem 0}h2{font-size:1.8rem;margin-bottom:2rem}.historia,.faq-item{font-size:1rem}.faq-question{font-size:1.2rem}.red-social{font-size:2rem}.red-social svg{width:26px!important;height:26px!important}.logo-image img{max-width:300px;width:90%}.integrantes-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem}.integrante{font-size:.9rem}.integrante img{width:120px;height:120px}.integrante p:first-of-type{font-size:1rem;padding:.4rem .8rem}.galeria{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.galeria img{height:180px}.cancion{font-size:1rem}.cancion-info h3{font-size:1.1rem}.play-btn{padding:.5rem 1rem;font-size:.9rem}.btn-subir{width:45px;height:45px;font-size:24px;bottom:15px;right:15px;padding:0;margin:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-text-size-adjust:100%}.info-contacto{font-size:.95rem!important}section:has(h2:contains("Conéctate con nosotros")) h2{font-size:1.3rem}}@media (max-width:768px){header{min-height:150px;padding:1.5rem 0}}@media (min-width:992px){.integrantes-grid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.galeria{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.galeria img{height:200px}}@media (max-width:480px){.container{width:100%;padding:10px}nav ul{padding:.6rem .5rem;justify-content:flex-start;padding-left:10px;padding-right:10px}nav li{margin:0 .3rem .5rem}nav a{padding:.4rem .6rem;font-size:(.9rem,2.2vw,.9rem)}.historia,.faq-item{padding:1rem}.faq-question{font-size:1rem}.red-social{font-size:1.5rem}.integrantes-grid{grid-template-columns:1fr 1fr}.logo-image img{max-width:250px}} 
+        .integrante{ background:var(--white);padding:1.5rem;border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,.1);text-align:center;font-size:0.9rem; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.05); animation-delay: calc(0.1s * var(--i));} .integrante:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);}
+        .integrante img{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:1rem;border:3px solid var(--accent-color); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+        .integrante p:first-of-type { font-weight:700;color: var(--primary-color);background-color: rgba(232, 185, 89, 0.2);padding:0.4rem 1rem;border-radius:20px;display:inline-block;margin:0.5rem 0;font-size:0.9rem; border: 1px solid rgba(232, 185, 89, 0.3);}
+        .galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin-top:1.5rem}.galeria img{width:100%;height:200px;object-fit:cover;border-radius:8px;transition:all 0.3s;cursor:pointer;border:3px solid var(--white); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+        .galeria img:hover{transform:scale(1.05);border-color:var(--accent-color); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);}.galeria figcaption{margin-top:.5rem;font-size:.9;color:#555;text-align:center}
+        .canciones-lista{background:#fff;padding:1.2rem;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.1);margin-top:1.5rem}.cancion{padding:1rem;border-bottom:1px solid rgba(0, 0, 0, 0.05);display:flex;justify-content:space-between;align-items:center;font-size:0.95rem;transition:all 0.3s; border-radius: 8px;} 
+        .cancion:hover { background-color: rgba(74, 107, 155, 0.05);}.cancion:last-child{border-bottom:none}.cancion-info h3{font-size:1rem;margin-bottom:.2rem}.cancion-info p{font-size:.8rem;color:#666}.play-btn{background: var(--primary-color); color: var(--white);border:none;padding:0.6rem 1.2rem;border-radius:30px;cursor:pointer;transition: all 0.3s;font-size:.9rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); min-width: 100px; height: 36px; line-height: 1;}
+        .play-btn:hover{background: var(--secondary-color); transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);} .play-btn i { font-size: 1rem;}.logo-image{margin:1rem auto 2rem;text-align:center;width:100%}.logo-image img{max-width:500px;width:80%;height:auto;right:700px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:transform .3s ease}.logo-image img:hover{transform:scale(1.02)}.btn-subir{position:fixed;bottom:30px;right:30px;background-color: var(--accent-color);color: var(--primary-color);border:none;border-radius:50%;width:50px;height:50px;font-size:24px;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;visibility:hidden;transition:all .3s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation; font-weight: bold;}.btn-subir.visible{opacity:1;visibility:visible}.btn-subir:hover,.btn-subir:active{background-color:var(--primary-color);transform:translateY(-5px) scale(1.1); color: var(--accent-color);}.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.95);z-index:9999;justify-content:center;align-items:center; opacity: 0; transition: opacity 0.3s ease;}.lightbox img{max-width:90%;max-height:80%;border-radius:4px; box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); animation: lightboxFadeIn 0.3s ease;} 
+        @keyframes lighboxFadeIn{ from {opacity: 0; transform: scale(0.9);} to {opacity: 1; transform: scale(1); } }.lightbox.active{display:flex; opacity: 1;}.close-lightbox{position:absolute;top:30px;right:30px;color: var(--white);font-size:40px;font-weight:700;cursor:pointer; transition: all 0.3s; opacity: 0.7;} @keyframes fadeInUp {from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);}} .historia, .faq-item, .integrante, .cancion, .evento { opacity: 0; animation: fadeInUp 0.6s ease forwards;} .faq-item:nth-child(1) { animation-delay: 0.1s; } .faq-item:nth-child(2) { animation-delay: 0.2s; } .faq-item:nth-child(3) { animation-delay: 0.3s; }
+        .close-lightbox:hover {opacity: 1; transform: rotate(90deg);}.lightbox-caption{position:absolute;bottom:30px;left:0;right:0;text-align:center;color: var(--white);padding:15px; font-size: 1.1rem; background-color: rgba(0, 0, 0, 0.5);}.info-contacto{font-size:.9rem!important;margin:.5rem 0!important}.info-contacto p{margin-bottom:.3rem!important}.info-contacto a{color:#1a2e4a;text-decoration:none;transition:color .3s}.info-contacto a:hover{color:#4a6b9b;text-decoration:underline}.info-contacto i{color:#1a2e4a;width:20px;text-align:center}section:has(h2:contains("Conéctate con nosotros")){padding:.5rem 0!important;margin-top:.5rem!important}section:has(h2:contains("Conéctate con nosotros")) h2{font-size:1.2rem;margin-bottom:.8rem}
+        .creditos{font-size:.8rem;opacity:.8;margin-top:1rem;color: rgba(255, 255, 255, 0.7);text-align:center} .creditos a { color: var(--accent-color); text-decoration: none; transition: all 0.3s;} .creditos a:hover { color: var(--white); text-decoration: underline;}.eventos{max-width:600px;margin:0 auto}.evento{display:flex;background: var(--white);margin-bottom:1.5rem;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.1);transition:all .3s ease; transform:translateY(20px); border-left: 4px solid var(--accent-color);} .evento:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);}.fecha{background: var(--primary-color);color: var(--white);padding:1.2rem;text-align:center;min-width:100px; display: flex; flex-direction: column; justify-content: center; font-weight: 700; font-size: 1.1rem;}.detalles{padding:1.5rem;flex-grow:1}.detalles h3{margin-bottom:.5rem;color: var(--primary-color); font-size: 1.2rem;}.compartir{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0}.btn-compartir{padding:.7rem 1.5rem;border:none;border-radius:30px;display:flex;align-items:center;gap:.5rem;cursor:pointer; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);}.btn-compartir[data-red=facebook]{background:#3b5998;color: var(--white)}.btn-compartir[data-red=whatsapp]{background:#3b5998;color:var(--white)} .btn-compartir:hover {transform: translate(-3px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);} .btn-compartir i { font-size: 1.2rem;}.visible{opacity:1;transform:translateY(0)}@media (min-width:768px){.container{width:90%;padding:20px}.logo{font-size:2.5rem}.slogan{font-size:1rem}nav ul{justify-content:center}nav li{margin:0 1rem}nav a{font-size:1rem;padding:.5rem 1rem}section{padding:2rem 0}h2{font-size:1.8rem;margin-bottom:2rem}.historia,.faq-item{font-size:1rem}.faq-question{font-size:1.2rem}.red-social{font-size:2rem}.red-social svg{width:26px!important;height:26px!important}.logo-image img{max-width:300px;width:90%}.integrantes-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem}.integrante{font-size:.9rem}.integrante img{width:120px;height:120px}.integrante p:first-of-type{font-size:1rem;padding:.4rem .8rem}.galeria{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.galeria img{height:180px}.cancion{font-size:1rem}.cancion-info h3{font-size:1.1rem}.play-btn{padding:.5rem 1rem;font-size:.9rem}.btn-subir{width:45px;height:45px;font-size:24px;bottom:15px;right:15px;padding:0;margin:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-text-size-adjust:100%}.info-contacto{font-size:.95rem!important}section:has(h2:contains("Conéctate con nosotros")) h2{font-size:1.3rem}}@media (max-width:768px){header{min-height:150px;padding:1.5rem 0}}@media (min-width:992px){.integrantes-grid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.galeria{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.galeria img{height:200px}}@media (max-width:480px){.container{width:100%;padding:10px}nav ul{padding:.6rem .5rem;justify-content:flex-start;padding-left:10px;padding-right:10px}nav li{margin:0 .3rem .5rem}nav a{padding:.4rem .6rem;font-size:(.9rem,2.2vw,.9rem)}.historia,.faq-item{padding:1rem}.faq-question{font-size:1rem}.red-social{font-size:1.5rem}.integrantes-grid{grid-template-columns:1fr 1fr}.logo-image img{max-width:250px}} 
+        /* Estilos para el acordeón de preguntas frecuentes */
+.faq-item {
+    margin-bottom: 0.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    font-weight: 700;
+    color: #1a2e4a;
+    font-size: 1.1rem;
+    padding: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.faq-question.active::after {
+    content: '-';
+}
+
+.faq-answer {
+    padding: 0 1.2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.show {
+    padding: 0 1.2rem 1.2rem;
+    max-height: 500px; /* Ajusta este valor según el contenido más largo */
+}
+
+.faq-question:hover {
+    background-color: rgba(74, 107, 155, 0.05);
+}
     </style>
 </head>
 <body>
@@ -87,35 +146,51 @@
                 
                 <div class="faq-item">
                     <div class="faq-question">¿Cuál es el significado detrás del nombre Jueces5?</div>
+                    <div class="faq-answer">
                     <p>Nuestro nombre es nuestro grito de guerra: "¡Escuchen, reyes! ¡Presten oídos, príncipes! Yo voy a cantar, voy a cantar al Señor, celebraré al Señor, el Dios de Israel". Por eso nuestra misión es clara: anunciar a Cristo con todo lo que somos y tenemos.
+                </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">¿Cómo se formó el grupo?</div>
+                    <div class="faq-answer">
                     <p>Nos conocimos en <a href="https://es.wikipedia.org/wiki/Lajas_(Cuba)" target="_blank" rel="noopener noreferrer">Santa Isabel de las Lajas</a> , un pequeño municipio de <a href="https://es.wikipedia.org/wiki/Cienfuegos" target="_blank" rel="noopener noreferrer">Cienfuegos</a>, <a href="https://es.wikipedia.org/wiki/Cuba" target="_blank" rel="noopener noreferrer">Cuba</a>. Éramos un grupo de jóvenes con un profundo amor por la música y la fe católica, y decidimos unirnos para alabar a Dios.
+                </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">¿Quiénes conforman Jueces5?</div>
+                    <div class="faq-answer">
                     <p>Somos un grupo de 7 amigos y músicos apasionados por nuestra fe. Cada uno aporta sus talentos únicos, desde voces hasta instrumentos, creando una mezcla especial que define nuestro sonido. Conoce más sobre cada integrante en nuestra sección dedicada.</p>
+                </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">¿Cómo describirían su estilo musical?</div>
+                    <div class="faq-answer">
                     <p>Nuestra música fusiona elementos contemporáneos con letras profundamente arraigadas en la fe católica. Experimentamos con diversos géneros, desde rock hasta alabanzas tradicionales, siempre buscando expresar la belleza de nuestra relación con Dios.</p>
-                </div>               
+                </div>        
+                </div>       
                 <div class="faq-item">
                     <div class="faq-question">¿Qué papel ha jugado la música en su camino espiritual?</div>
+                    <div class="faq-answer">
                     <p>La música ha sido compañera inseparable en nuestro peregrinar de fe. En momentos de alegría, es nuestra forma de agradecer; en tiempos difíciles, se convierte en oración que sostiene. Creemos firmemente que Dios nos habla a través de las melodías y nos usa como instrumentos para llegar a otros.</p>
+                </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">¿Qué pueden esperar los asistentes a sus conciertos?</div>
+                    <div class="faq-answer">
                     <p>Nuestros conciertos son más que presentaciones musicales; son encuentros de oración y comunidad. Buscamos crear un espacio donde todos puedan sentirse acogidos, elevando juntos alabanzas al Señor.</p>
+                </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">¿Qué nos cuentan sobre su álbum?</div>
+                    <div class="faq-answer">
                     <p>Nuestro álbum, "Adorarte", es fruto de un intenso proceso de oración y creatividad. Cada canción refleja experiencias personales de encuentro con Dios, desde la alegría de la conversión hasta la consolación en el sufrimiento. Aunque aun no lo hemos terminado, con la gracia de Dios pronto lo terminaremos.</p>
+                </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">¿Qué proyectos tienen para el futuro?</div>
+                    <div class="faq-answer">
                     <p>Estamos trabajando en nuestro actual álbum (Adorarte), tambien celebramos cumpleaños y otras actividades fuera del ámbito eclesiástico, porque creemos que la alegría de Dios debe llegar a todos los espacios. Una sonrisa, un momento de conexión a través de la música, puede ser el mejor regalo para alguien que necesita levantar el ánimo.</p>
+                </div>
                 </div>
             </section>                
         </div>
@@ -125,43 +200,43 @@
                 <h2>Conoce al equipo</h2>
                 <div class="integrantes-grid">
                     <div class="integrante">
-                        <img src="imagenes/integrantes/adriana.jpg" alt="Adriana Alonso Contreras" loading="lazy">
+                        <img src="imagenes/integrantes/adriana.webp" alt="foto1" loading="lazy">
                         <h3>Adriana Alonso Contreras</h3>
                         <p>Voz 🎤</p>
                         <p>Desde pequeña se sintió atraída por la música y el canto gracias a su madre. Formó parte de Jueces5 desde sus inicios y junto a ellos ha mejorado significativamente</p>
                     </div>
                     <div class="integrante">
-                        <img src="imagenes/integrantes/yaniela.jpg" alt="Yaniela Rodríguez" loading="lazy">
+                        <img src="imagenes/integrantes/yaniela.webp" alt="foto2" loading="lazy">
                         <h3>Yaniela Rodríguez Pérez</h3>
                         <p>Voz 🎤</p>
                         <p>Tiene 14 años y es parte de la iglesia católica. Hace un año se unió a Jueces5 después de participar en varios eventos culturales de su municipio como aficionada. Al integrarse al grupo, no solo cumplió el sueño de cantar, sino que también fortaleció su fe con Dios, quien ha sido clave en este logro.</p>
                     </div>
                     <div class="integrante">
-                        <img src="imagenes/integrantes/pedro.jpg" alt="Pedro Pablo Pérez Villavicencio" loading="lazy">
+                        <img src="imagenes/integrantes/pedro.webp" alt="foto3" loading="lazy">
                         <h3>Pedro Pablo Pérez Villavicencio</h3>
                         <p>Bajo/Director 🎸</p>
                         <p>Tiene 20 años y desde pequeño ha sido católico, asistiendo a la iglesia y creciendo en su fe. Su pasión por la música comenzó cuando tomó clases con su profesor Victor junto con la creación del grupo, enamorándose del bajo, instrumento que sigue siendo su fiel compañero. Disfruta de casi todos los géneros musicales, pero tiene preferencia por el rock, las baladas y la salsa.</p>
                     </div>
                     <div class="integrante">
-                        <img src="imagenes/integrantes/christian.jpg" alt="Christian Alejandro Cruz Hernández" loading="lazy">
+                        <img src="imagenes/integrantes/christian.webp" alt="foto4" loading="lazy">
                         <h3>Christian Alejandro Cruz Hernández</h3>
                         <p>Batería 🥁</p>
                         <p>Tiene 23 años, mientras estudiaba en secundaria descubrió que la batería era su lugar seguro. Comenzó la carrera de "Derecho" pero no la terminó para dedicarse completamente a la música.</p>
                     </div>
                     <div class="integrante">
-                        <img src="imagenes/integrantes/jessica.jpg" alt="Jessica Hernández Castellón" loading="lazy">
+                        <img src="imagenes/integrantes/jessica.webp" alt="foto5" loading="lazy">
                         <h3>Jessica Hernández Castellón</h3>
                         <p>Teclado 🎹</p>
                         <p>Desde muy pequeña ha tenido la fortuna de ser miembro de la iglesia católica. Fue invitada a ser parte de esta familia como tecladista, aunque no es músico de profesión, pero hace su mejor esfuerzo para aprender y mejorar en el grupo.</p>
                     </div>
                     <div class="integrante">
-                        <img src="imagenes/integrantes/emanuel.jpg" alt="Emanuel Jesús Sánchez Insua" loading="lazy">
+                        <img src="imagenes/integrantes/emanuel.webp" alt="foto6" loading="lazy">
                         <h3>Emanuel Jesús Sánchez Insua</h3>
                         <p>Guitarra eléctrica 🎸</p>
                         <p>Tiene 20 años y desde pequeño asiste a la iglesia católica. Lleva tocando la guitarra desde los 14, aprendiendo de manera autodidacta. Aunque empezó con una guitarra acústica (como la mayoría de guitarristas), su meta era tener una eléctrica, gracias a Jueces5 logró esa meta. Apasionado del rock, la música se ha convertido en una parte esencial de su vida y su fe.</p>
                     </div>
                     <div class="integrante">
-                        <img src="imagenes/integrantes/angel.jpg" alt="Ángel Luis González Osés" loading="lazy">
+                        <img src="imagenes/integrantes/angel.webp" alt="foto7" loading="lazy">
                         <h3>Ángel Luis González Osés</h3>
                         <p>Guitarra acústica 🎸</p>
                         <p>Trabaja en el policlínico de "Santa Isabel de las Lajas" como "Jéfe de Departamento de Estadística" desde pequeño va a la iglesia católica y es miembro de Jueces 5 desde su fundación</p>
@@ -499,7 +574,6 @@
             // Intersection Observer para lazy loading de imágenes
             document.addEventListener('DOMContentLoaded', function() {
                 const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
-        
                 if ('IntersectionObserver' in window) {
                     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
                         entries.forEach(function(entry) {
@@ -518,9 +592,6 @@
                     });
                 }
             });
-
-
-
             // Intersection Observer para animaciones
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -546,7 +617,6 @@
             function loadAdaptiveImages() {
                 const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
                 let quality = 'high';
-    
                 if (connection) {
                     if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
                         quality = 'low';
@@ -554,14 +624,30 @@
                         quality = 'medium';
                     }
                 }
-    
                 document.querySelectorAll('img[data-src]').forEach(img => {
                     const src = img.getAttribute('data-src');
                     img.src = quality === 'high' ? src : src.replace('.webp', `-${quality}.webp`);
                 });
             }
-
-            window.addEventListener('load', loadAdaptiveImages);
+                window.addEventListener('load', loadAdaptiveImages);
+                // Acordeón de preguntas frecuentes
+                document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const item = question.parentElement;
+                // Cerrar otros items abiertos
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.querySelector('.faq-question').classList.remove('active');
+                    otherItem.querySelector('.faq-answer').classList.remove('show');
+                }
+            });
+        
+                 // Alternar el item actual
+                question.classList.toggle('active');
+                answer.classList.toggle('show');
+            });
+        });
     </script>
 </body>
 </html>
