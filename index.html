@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="es" style="scroll-behavior: smooth;">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Jueces5 - Banda de música cristiana de Cuba. Música que inspira y fortalece la fe.">
     <meta name="keywords" content="música cristiana, Cuba, Jueces5, adoración, banda cristiana">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Jueces5">
-    <meta charset="UTF-8">
     <title>Jueces5 - Música con Fe</title>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" as="style">
-    <link rel="preload" href="imagenes/grupo_3.webp" as="image">
-    <link rel="preload" href="estilos.min.css" as="style">
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin as="font">
-    <link rel="preload" href="imagenes/grupo_3.webp" as="image" imagesrcset="imagenes/grupo_3-small.webp 480w, imagenes/grupo_3-medium.webp 768w, imagenes/grupo_3-large.webp 1200w" imagesizes="(max-width: 600px) 480px, (max-width: 1000px) 768px, 1200px">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://your-image-cdn.com" crossorigin>
-    <link rel="stylesheet" href="estilos.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" as="style">
+    <link rel="preload" href="estilos.min.css" as="style">
+    <link rel="preload" href="imagenes/grupo_3.webp" alt="Banda Jueces5" loading="lazy" as="image" imagesrcset="imagenes/grupo_3-small.webp 480w, imagenes/grupo_3-medium.webp 768w, imagenes/grupo_3-large.webp 1200w" imagesizes="(max-width: 600px) 480px, (max-width: 1000px) 768px, 1200px">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="estilos.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">   
     <style>
        :root {--primary-color: #1a2e4a; --secondary-color: #4a6b9b; --accent-color: #e8b959; --light-color: #f8f5ee; --text-color: #333; --text-light: #777; --white: #fff; --black: #000;}
        *{box-sizing:border-box;margin:0;padding:0}body{font-family:'Open Sans',sans-serif;line-height:1.6;color: var(--text-color);background-color: var(--light-color);font-size:16px; font-display: swap;} h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif; font-weight: 700; font-display: swap;}
-       .container{width:95%;max-width:1200px;margin:0 auto;padding:15px}header{background:linear-gradient(rgba(26,46,74,0.7)),
-        url('imagenes/grupo_3.webp') no-repeat center center;background-size:cover;color:var(--white);padding:3rem 0;text-align:center;position:relative;min-height:300px;display:flex;align-items:center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);}
-        .logo{font-size:3rem;font-weight:700;margin-bottom:0.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); color: var(--white); font-family: 'Montserrat', sans-serif;}.slogan{font-style:italic;color:var(--accent-color);font-size:1.2rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); margin-top: 1rem;}
+       .container{width:95%;max-width:1200px;margin:0 auto;padding:15px}header{background:linear-gradient(rgba(26,46,74,0.7)), url('imagenes/grupo_3.webp') no-repeat center center/cover;
+       color:var(--white);padding:3rem 0;text-align:center;position:relative;min-height:300px;display:flex;align-items:center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);}
+        .logo{font-size:3rem;font-weight:700;margin-bottom:0.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); color: var(--white); }.slogan{font-style:italic;color:var(--accent-color);font-size:1.2rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); margin-top: 1rem;}
         nav{background-color: var(--primary-color);position:sticky;top:0;z-index:100;padding:0.5rem 0; overflow-x:auto;-webkit-overflow-scrolling:touch; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}
         nav ul{display:flex;justify-content:center;list-style:none;padding:0;margin:0 auto;flex-wrap:nowrap;overflow-x:auto;max-width:100%;flex-wrap:wrap;-webkit-overflow-scrolling:touch;white-space:nowrap}
         nav li{display:inline-block;margin:0 .8rem;flex:0 0 auto;flex-shrink:0}
@@ -43,6 +43,7 @@
         .integrante{ background:var(--white);padding:1.5rem;border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,.1);text-align:center;font-size:0.9rem; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.05); animation-delay: calc(0.1s * var(--i));} .integrante:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);}
         .integrante img{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:1rem;border:3px solid var(--accent-color); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
         .integrante p:first-of-type { font-weight:700;color: var(--primary-color);background-color: rgba(232, 185, 89, 0.2);padding:0.4rem 1rem;border-radius:20px;display:inline-block;margin:0.5rem 0;font-size:0.9rem; border: 1px solid rgba(232, 185, 89, 0.3);}
+        img {opacity: 0;transition: opacity 0.3s;}img.loaded {opacity: 1;}
         .galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin-top:1.5rem}.galeria img{width:100%;height:200px;object-fit:cover;border-radius:8px;transition:all 0.3s;cursor:pointer;border:3px solid var(--white); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
         .galeria img:hover{transform:scale(1.05);border-color:var(--accent-color); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);}.galeria figcaption{margin-top:.5rem;font-size:.9;color:#555;text-align:center}
         .canciones-lista{background:#fff;padding:1.2rem;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.1);margin-top:1.5rem}.cancion{padding:1rem;border-bottom:1px solid rgba(0, 0, 0, 0.05);display:flex;justify-content:space-between;align-items:center;font-size:0.95rem;transition:all 0.3s; border-radius: 8px;} 
@@ -85,20 +86,12 @@
                 <h2>Próximos Eventos</h2>
                 <div class="eventos">
                     <div class="evento">
-                        <div class="fecha">22/7/2025</div>
+                        <div class="fecha"></div>
                         <div class="detalles">
-                            <h3>New York</h3>
-                            <p>Ejemplo</p>
+                            <h3></h3>
+                            <p></p>
                         </div>
-                    </div>
-                    <div class="evento">
-                        <div class="fecha">28/7/2025</div>
-                        <div class="detalles">
-                            <h3>España</h3>
-                            <p>Ejemplo</p>
-                        </div>
-                    </div>
-                   
+                    </div>                  
                 </div>
             </section>
             <section>
@@ -592,29 +585,51 @@
             }
                 window.addEventListener('load', loadAdaptiveImages);
                 // Reemplaza el código actual del acordeón con este:
-document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', () => {
-    const answer = question.nextElementSibling;
-    const item = question.parentElement;
+            document.querySelectorAll('.faq-question').forEach(question => {
+               question.addEventListener('click', () => {
+               const answer = question.nextElementSibling;
+               const item = question.parentElement;
     
-    // Solo anima si hay un cambio real
-    if(!question.classList.contains('active')) {
-      question.classList.add('active');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
+               // Solo anima si hay un cambio real
+                if(!question.classList.contains('active')) {
+                 question.classList.add('active');
+                 answer.style.maxHeight = answer.scrollHeight + 'px';
       
-      // Cerrar otros items
-      document.querySelectorAll('.faq-item').forEach(otherItem => {
-        if (otherItem !== item) {
-          otherItem.querySelector('.faq-question').classList.remove('active');
-          otherItem.querySelector('.faq-answer').style.maxHeight = null;
-        }
-      });
-    } else {
-      question.classList.remove('active');
-      answer.style.maxHeight = null;
-    }
-  });
-});
+                 // Cerrar otros items
+                 document.querySelectorAll('.faq-item').forEach(otherItem => {
+                   if (otherItem !== item) {
+                     otherItem.querySelector('.faq-question').classList.remove('active');
+                     otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                   }
+                 });
+               } else {
+                 question.classList.remove('active');
+                 answer.style.maxHeight = null;
+               }
+             });
+           });
+           if('serviceWorker' in navigator) {
+               navigator.serviceWorker.register('/sw.js');
+             }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          if(navigator.connection && 
+            (navigator.connection.effectiveType === 'slow-2g' || 
+             navigator.connection.effectiveType === '2g')) {
+     
+            document.querySelectorAll('img').forEach(img => {
+              if(img.dataset.lowres) {
+                 img.src = img.dataset.lowres; // Opcional: usa esta línea si añades atributos data-lowres
+                }
+              img.loading = 'eager'; // Forzar carga aunque sea lenta
+            });
+          }
+        });
+        document.querySelectorAll('img').forEach(img => {
+          img.onload = () => img.classList.add('loaded');
+          if(img.complete) img.classList.add('loaded');
+        });
     </script>
 </body>
 </html>
