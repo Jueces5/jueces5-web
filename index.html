@@ -163,77 +163,120 @@
             </section>
         </div>
         <!-- Galería -->
-        <div id="galeria" class="page">
+         <div id="galeria" class="page">
             <section>
                 <h2>Galería</h2>
+                <div class="categorias-galeria">
+                    <button class="categoria-btn active" data-categoria="todas">Todas</button>
+                    <button class="categoria-btn" data-categoria="conciertos">Conciertos</button>
+                    <button class="categoria-btn" data-categoria="cumpleanos">Cumpleaños y Celebraciones</button>
+                    <button class="categoria-btn" data-categoria="personal">Personal</button>
+                </div>
                 <div class="galeria">
-                    <figure>
-                        <img src="imagenes/concierto_de_resurreccion/a.webp" alt="foto1" loading="lazy">
+
+                    <!-- Todas las imágenes -->
+                    <!-- Conciertos -->
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/concierto_de_resurreccion/a.webp" alt="Concierto de resurrección" loading="lazy">
                         <figcaption>Concierto por resurrección, Santa Isabel de las Lajas.</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/pascua_joven/a.webp" alt="foto2" loading="lazy">
-                        <figcaption>Concierto en la Pascua Jóven, <a href="https://es.wikipedia.org/wiki/La_Habana" target="_blank" rel="noopener noreferrer">La Habana.</a></figcaption>
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/pascua_joven/a.webp" alt="Pascua Joven" loading="lazy">
+                        <figcaption>Concierto en la Pascua Jóven, La Habana.</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/grabacion_de_amor_de_dias_grises/a.webp" alt="foto3" loading="lazy">
-                        <figcaption>Proceso de grabación de <a href="https://youtu.be/pZGADE6x05w?si=OY9KWLV8Slt31G3a" target="_blank" rel="noopener noreferrer">Amor de Días Grises</a></figcaption>
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/grabacion_de_amor_de_dias_grises/a.webp" alt="Grabación" loading="lazy">
+                        <figcaption>Proceso de grabación de Amor de Días Grises</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/ajuria/a.webp" alt="foto4" loading="lazy">
-                        <figcaption>Concierto de navidad en <a href="https://www.ecured.cu/Ajuria_(Santa_Isabel_de_las_Lajas)" target="_blank" rel="noopener noreferrer">Ajuria</a></figcaption>
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/ajuria/a.webp" alt="Concierto Navidad" loading="lazy">
+                        <figcaption>Concierto de navidad en Ajuria</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/lajas/b.webp" alt="foto5" loading="lazy">
-                        <figcaption>Concierto en la <a href="https://campaners.com/php/campanar.php?numer=5959" target="_blank" rel="noopener noreferrer">"Parroquia San Antonio de Padua"</a>, Santa Isabel de las Lajas.</figcaption>
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/lajas/b.webp" alt="Concierto Parroquia" loading="lazy">
+                        <figcaption>Concierto en la Parroquia San Antonio de Padua, Santa Isabel de las Lajas.</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/cinelajas/a.webp" alt="foto" loading="lazy">
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/cinelajas/a.webp" alt="Celebración en Cine" loading="lazy">
                         <figcaption>Cine, Santa Isabel de las Lajas.</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/mariapolis/b.webp" alt="foto" loading="lazy">
-                        <figcaption>Encuentro en la <a href="https://www.focolare.org/es/mariapolis/" target="_blank" rel="noopener noreferrer">"Mariapolis"</a>, <a href="https://es.wikipedia.org/wiki/Camag%C3%BCey" target="_blank" rel="noopener noreferrer">Camagüey</a></figcaption>
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/mariapolis/b.webp" alt="Mariapolis" loading="lazy">
+                        <figcaption>Encuentro en la Mariapolis, Camagüey</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/cruces_2023/a.webp" alt="foto" loading="lazy">
-                        <figcaption>Iglesia Católica de <a href="https://es.wikipedia.org/wiki/Cruces_(Cuba)" target="_blank" rel="noopener noreferrer">Cruces </a>(Parroquia La Santa Cruz).</figcaption>
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/cruces_2023/a.webp" alt="Cruces" loading="lazy">
+                        <figcaption>Iglesia Católica de Cruces (Parroquia La Santa Cruz)</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/la-habana/a.webp" alt="foto" loading="lazy">
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/la-habana/a.webp" alt="Teatro" loading="lazy">
                         <figcaption>Concierto en el teatro de los <a href="https://www.focolare.org/es/" target="_blank" rel="noopener noreferrer">Focolares</a>, La Habana.</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/virgen_de_la_caridad_cartagena/a.webp" alt="foto" loading="lazy">
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/virgen_de_la_caridad_cartagena/a.webp" alt="Cartagena" loading="lazy">
                         <figcaption>Concierto en el santuario diocesano de la Virgen de la Caridad, <a href="https://www.ecured.cu/Cartagena_(Cienfuegos)" target="_blank" rel="noopener noreferrer">Cartagena/Rodas.</a></figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/JDJ/a.webp" alt="foto" loading="lazy">
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/JDJ/a.webp" alt="JDJ" loading="lazy">
                         <figcaption>Concierto por la <a href="https://www.sepaju.es/jdj-jornada-de-juventud-ork" target="_blank" rel="noopener noreferrer">JDJ (Jornada Diocesana de la Juventud)</a>, <a href="https://es.wikipedia.org/wiki/Cienfuegos    " target="_blank" rel="noopener noreferrer">Cienfuegos.</a></figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/asuncion_de_la_virgen_maria/a.webp" alt="foto" loading="lazy">
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/asuncion_de_la_virgen_maria/a.webp" alt="Virgen Maria" loading="lazy">
                         <figcaption>Celebrando la fiesta de la asunción de la Virgen María en Guabairo.</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/señora_del_carmen/a.webp" alt="foto" loading="lazy">
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/señora_del_carmen/a.webp" alt="Señora del Carmen" loading="lazy">
                         <figcaption>Concierto por la fiesta patronal de nuestra Señora del Carmen, <a href="https://es.wikipedia.org/wiki/Rodas_(Cuba)" target="_blank" rel="noopener noreferrer">Rodas.</a></figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/festival_juvenil/a.webp" alt="foto" loading="lazy">
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/festival_juvenil/a.webp" alt="Festival Juvenil" loading="lazy">
                         <figcaption>Fesitival Juvenil Vocacional en Cienfuegos.</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/boda_yisel/a.webp" alt="foto" loading="lazy">
-                        <figcaption>Boda de un miembro de nuestra parroquia <a href="https://campaners.com/php/campanar.php?numer=5959" target="_blank" rel="noopener noreferrer">"Parroquia San Antonio de Padua"</a></figcaption>
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/boda_yisel/a.webp" alt="Boda" loading="lazy">
+                        <figcaption>Boda de un miembro de nuestra parroquia</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/primer_concierto/a.webp" alt="foto" loading="lazy">
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/primer_concierto/a.webp" alt="Primer concierto" loading="lazy">
                         <figcaption>Primera actuación en un encuentro de Jóvenes</figcaption>
                     </figure>
-                    <figure>
-                        <img src="imagenes/primer_instrumental/a.webp" alt="foto" loading="lazy">
+                    <figure data-categoria="conciertos">
+                        <img src="imagenes/conciertos/primer_instrumental/a.webp" alt="Primer instrumental" loading="lazy">
                         <figcaption>Primer instrumental</figcaption>
+                    </figure>
+                    <!-- Cumpleaños y celebraciones -->
+                     <figure data-categoria="cumpleanos">
+                        <img src="imagenes/cumpleaños/cumple_daniel/a.webp" alt="Daniel" loading="lazy">
+                        <figcaption>Celebrando el cumpleaños de Daniel</figcaption>
+                    </figure>
+                    <figure data-categoria="cumpleanos">
+                        <img src="imagenes/cumpleaños/cumple_belkys/a.webp" alt="Belkys" loading="lazy">
+                        <figcaption>Celebrando el cumpleaños de Belkys</figcaption>
+                    </figure>
+                    <!-- Personal -->
+                     <figure data-categoria="personal">
+                        <img src="imagenes/personal/a.webp" alt="foto" loading="lazy">
+                        <figcaption></figcaption>
+                    </figure>
+                    <figure data-categoria="personal">
+                        <img src="imagenes/personal/b.webp" alt="foto" loading="lazy">
+                        <figcaption></figcaption>
+                    </figure>
+                    <figure data-categoria="personal">
+                        <img src="imagenes/personal/c.webp" alt="foto" loading="lazy">
+                        <figcaption></figcaption>
+                    </figure>
+                    <figure data-categoria="personal">
+                        <img src="imagenes/personal/d.webp" alt="foto" loading="lazy">
+                        <figcaption></figcaption>
+                    </figure>
+                        <figure data-categoria="personal">
+                        <img src="imagenes/personal/e.webp" alt="foto" loading="lazy">
+                        <figcaption></figcaption>
+                    </figure>
+                    <figure data-categoria="personal">
+                        <img src="imagenes/personal/f.webp" alt="foto" loading="lazy">
+                        <figcaption></figcaption>
                     </figure>
                 </div>
             </section>

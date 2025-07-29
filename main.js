@@ -170,3 +170,35 @@ if('serviceWorker' in navigator) {
         });
     });
 }
+// Filtrado de categorías en la galería
+document.querySelectorAll('.categoria-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Quitar clase active de todos los botones
+        document.querySelectorAll('.categoria-btn').forEach(b => {
+            b.classList.remove('active');
+        });
+        
+        // Añadir clase active al botón clickeado
+        this.classList.add('active');
+        
+        // Obtener categoría seleccionada
+        const categoria = this.getAttribute('data-categoria');
+        const galeria = document.querySelector('.galeria');
+        
+        // Remover todas las clases de filtro
+        galeria.className = 'galeria';
+        
+        // Añadir clase correspondiente al filtro
+        if (categoria !== 'todas') {
+            galeria.classList.add(`mostrar-${categoria}`);
+        } else {
+            galeria.classList.add('mostrar-todas');
+        }
+    });
+});
+
+// Mostrar todas las imágenes al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    const galeria = document.querySelector('.galeria');
+    galeria.classList.add('mostrar-todas');
+});
