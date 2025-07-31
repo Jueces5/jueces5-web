@@ -1,22 +1,26 @@
-// Navegación entre páginas
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const pageId = this.getAttribute('data-page');
-        // Ocultar todas las páginas
         document.querySelectorAll('.page').forEach(page => {
             page.classList.remove('active');
         });
-        // Mostrar la página seleccionada
         document.getElementById(pageId).classList.add('active');
-        // Actualizar navegación activa
+        
         document.querySelectorAll('.nav-link').forEach(navLink => {
-            navLink.style.backgroundColor = '';
+            navLink.classList.remove('active');
         });
-        this.style.backgroundColor = '#4a6b9b';
-        // Desplazarse al inicio
+        this.classList.add('active');
+        const mobileNav = document.querySelector('.mobile-nav');
+        if (mobileNav.classList.contains('active')) {
+            document.querySelector('.menu-hamburguesa').classList.remove('active');
+            mobileNav.classList.remove('active');
+            document.querySelector('.menu-overlay').classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
         window.scrollTo(0, 0);
-    });});
+    });
+});
 // Control de audio
 document.addEventListener('DOMContentLoaded', function() {
     const playButtons = document.querySelectorAll('.play-btn');
@@ -31,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (audio.paused) {
                     await audio.play();
                     this.textContent = 'Pausar';       
-                    // Pausar otros audios
                     document.querySelectorAll('audio').forEach(a => {
                         if (a !== audio && !a.paused) {
                             a.pause();
@@ -68,7 +71,7 @@ lightbox.addEventListener('click', function(e) {
 // Botón subir
 document.addEventListener('DOMContentLoaded', function() {
     const handleScroll = () => {
-        document.querySelectorAll('.page.active .btn-subir').forEach(btn => {
+        document.querySelectorAll('.btn-subir').forEach(btn => {
             if (window.scrollY > 300) {
                 btn.classList.add('visible');
             } else {
@@ -92,7 +95,6 @@ document.querySelectorAll('.faq-question').forEach(question => {
         if(!question.classList.contains('active')) {
             question.classList.add('active');
             answer.style.maxHeight = answer.scrollHeight + 'px';
-            // Cerrar otros items
             document.querySelectorAll('.faq-item').forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.querySelector('.faq-question').classList.remove('active');
@@ -113,13 +115,11 @@ document.addEventListener('DOMContentLoaded', function() {
         img.loading = 'eager';
       });
     }
-    // Carga de imágenes
     document.querySelectorAll('img').forEach(img => {
       img.onload = () => img.classList.add('loaded');
       if(img.complete) img.classList.add('loaded');
     });
 });
-// Service Worker
 if('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js').then(registration => {
@@ -129,7 +129,6 @@ if('serviceWorker' in navigator) {
         });
     });
 }
-// Filtrado de categorías en la galería
 document.querySelectorAll('.categoria-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         document.querySelectorAll('.categoria-btn').forEach(b => {
@@ -149,4 +148,74 @@ document.querySelectorAll('.categoria-btn').forEach(btn => {
 document.addEventListener('DOMContentLoaded', function() {
     const galeria = document.querySelector('.galeria');
     galeria.classList.add('mostrar-todas');
+});
+
+//Hamburguesa
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.menu-hamburguesa');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const closeMenu = document.querySelector('.close-menu');
+    const body = document.body;
+    const menuOverlay = document.createElement('div');
+    menuOverlay.className = 'menu-overlay';
+    document.body.appendChild(menuOverlay);
+    hamburger.addEventListener('click', function() {
+        this.classList.add('active');
+        mobileNav.classList.add('active');
+        menuOverlay.classList.add('active');
+        body.classList.add('menu-open');
+    });
+    function closeMobileMenu() {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        body.classList.remove('menu-open');
+    }
+    closeMenu.addEventListener('click', closeMobileMenu);
+    menuOverlay.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-nav .nav-link').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 100) {
+            hamburger.style.top = '15px';
+        } else {
+            hamburger.style.top = '20px';
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    const hamburger = document.querySelector('.menu-hamburguesa');
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const headerHeight = header.offsetHeight;
+        if (scrollPosition > headerHeight - 50) {
+            hamburger.classList.add('scrolled');
+            header.classList.add('header-scrolled');
+        } else {
+            hamburger.classList.remove('scrolled');
+            header.classList.remove('header-scrolled');
+        }
+        if (scrollPosition > 100) {
+            hamburger.style.top = '15px';
+        } else {
+            hamburger.style.top = '20px';
+        }
+    });
+});
+// Botones para compartir
+document.querySelectorAll('.btn-compartir').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const redSocial = this.getAttribute('data-red');
+        const url = encodeURIComponent(window.location.href);
+        const titulo = encodeURIComponent(document.title);
+        
+        if (redSocial === 'facebook') {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        } else if (redSocial === 'whatsapp') {
+            window.open(`https://wa.me/?text=${titulo}%20${url}`, '_blank');
+        }
+    });
 });
