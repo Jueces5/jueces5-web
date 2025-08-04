@@ -1,3 +1,24 @@
+function animarCruz() {
+    const cruz = document.querySelector('.cruz-animada');
+    // Reinicia la animación removiendo y agregando la clase
+    cruz.style.animation = 'none';
+    cruz.offsetHeight; // Trigger reflow
+    cruz.style.animation = null;
+    
+    // Aplica la animación (solo para móviles)
+    if (window.innerWidth <= 992) {
+        cruz.style.animation = 'aparecerCruz 1.5s ease-in-out forwards';
+        cruz.style.animationDelay = '0.5s';
+        
+        // Animación de las partes de la cruz
+        const before = window.getComputedStyle(cruz, '::before');
+        const after = window.getComputedStyle(cruz, '::after');
+        
+        // Reinicia las animaciones de los pseudo-elementos
+        cruz.style.setProperty('--cruz-before-animation', 'extenderHorizontal 0.5s ease-in-out forwards');
+        cruz.style.setProperty('--cruz-after-animation', 'extenderVertical 0.5s ease-in-out forwards');
+    }
+}
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -11,6 +32,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
             navLink.classList.remove('active');
         });
         this.classList.add('active');
+        animarCruz();
         const mobileNav = document.querySelector('.mobile-nav');
         if (mobileNav.classList.contains('active')) {
             document.querySelector('.menu-hamburguesa').classList.remove('active');

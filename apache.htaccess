@@ -5,3 +5,7 @@
   ExpiresActive On
   ExpiresByType image/webp "access plus 1 year"
 </IfModule>
+gzip on;
+gzip_types text/css application/javascript image/svg+xml;
+brotli on;
+brotli_types text/css application/javascript image/svg+xml;
