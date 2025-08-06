@@ -241,3 +241,16 @@ document.querySelectorAll('.btn-compartir').forEach(btn => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+    
+    // 3 segundos(4000ms)
+    setInterval(nextSlide, 4000);
+});
