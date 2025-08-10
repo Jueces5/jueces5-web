@@ -9,7 +9,7 @@ const IMAGES = [
   '/imagenes/conciertos/primer_concierto/a.webp', '/imagenes/conciertos/primer_instrumental/a.webp', '/imagenes/cumpleaños/cumple_daniel/a.webp', '/imagenes/cumpleaños/cumple_belkys/a.webp',
   '/imagenes/personal/a.webp', '/imagenes/personal/b.webp', '/imagenes/personal/c.webp', '/imagenes/personal/d.webp',
   '/imagenes/personal/e.webp', '/imagenes/personal/f.webp', '/imagenes/personal/g.webp', '/imagenes/personal/h.webp', 
-  '/imagenes/personal/i.webp', '/imagenes/personal/j.webp', '/imagenes/personal/k.webp',
+  '/imagenes/personal/i.webp', '/imagenes/personal/j.webp', '/imagenes/personal/k.webp', '/imagenes/personal/l.webp'
 ];
 self.addEventListener('install', (event) => {
   event.waitUntil(
